@@ -1,0 +1,33 @@
+$path:"../";
+$font-varEn1:"Roboto", sans-serif;
+$font-varEn2: Script MT Bold,sans-serif;
+
+$def-color:#626262;
+$link-color:#b4ad9e;
+$title-color: #504f4f;
+$fz:14px;
+
+%title__style{
+  font-size: 30px;
+  color:$title-color;
+  font-weight: 400;
+  font-family: $font-varEn2;
+}
+
+%nav__link {
+  font-size: 30px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: $def-color;
+  font-weight: 400;
+  font-family:$font-varEn1 ;
+  text-align: center;
+}
+%text__style{
+  font-size: 14px;
+  line-height: 24px;
+  color: $def-color;
+  font-weight: 400;
+  font-family:$font-varEn2;
+
+}

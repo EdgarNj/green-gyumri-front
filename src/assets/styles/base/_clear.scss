@@ -1,0 +1,40 @@
+ul{
+  list-style-type: none;
+
+  ul{
+    list-style-type: none;
+  }
+}
+a{
+  text-decoration: none;
+color: inherit;
+}.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.space-b{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+
+
+button{
+  border: 0;
+  cursor: pointer;
+}
+
+::placeholder{
+  //font-size: $fz;
+  line-height: 24px;
+  color: #626262;
+  font-weight: 400;
+  //font-family: $font-var2;
+}

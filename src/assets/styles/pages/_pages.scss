@@ -1,0 +1,10 @@
+@import "home";
+
+.home__wrapper {
+  .header {
+    position: absolute;
+    background-color: inherit;
+    z-index: 555;
+    box-shadow: none;
+  }
+}

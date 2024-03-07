@@ -1,0 +1,143 @@
+.dark {
+  .langs {
+    span {
+      color: white;
+    }
+  }
+
+  .polygon {
+    path {
+      fill: white;
+    }
+  }
+
+  .lang path {
+    fill: white;
+  }
+
+  .lang_dropdown {
+    .box__container {
+      background-color: inherit;
+      border: 2px solid rgba(0, 0, 255, 0);
+    }
+
+    &.open {
+      .box__container {
+        background-color: black;
+        border: 2px solid rgba(0, 0, 255, 0);
+      }
+    }
+
+    .lang__container {
+      span {
+        color: white;
+      }
+    }
+  }
+}
+
+.lang path {
+  fill: black;
+}
+
+.langs {
+  transition: opacity 0.4s;
+
+  span {
+    color: black;
+  }
+}
+
+.lang_dropdown {
+  cursor: pointer;
+  width: 90px;
+  display: flex;
+  height: 35px;
+  border-radius: 15px;
+  flex-direction: column;
+  position: relative;
+  z-index: 15;
+
+  .polygon {
+    transform: scaleY(1);
+    transition: all 0.4s;
+  }
+
+  .box__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: height 0.4s;
+    width: 100%;
+    height: 35px;
+    border: 2px solid rgba(0, 0, 255, 0);
+    border-radius: 10px;
+    z-index: -5;
+    background-color: white;
+  }
+
+  &.open {
+    .box__container {
+      height: 100px;
+      z-index: 5;
+      border: 2px solid black;
+    }
+    .polygon {
+      transform: scaleY(-1);
+    }
+    .langs {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .langs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .lang {
+      margin: 5px 0;
+      display: flex;
+      padding: 0 3px;
+
+      span {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+.polygon {
+  path {
+    fill: black;
+  }
+}
+
+.lang__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  span {
+    color: black;
+  }
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}

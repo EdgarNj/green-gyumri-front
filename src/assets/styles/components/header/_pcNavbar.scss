@@ -1,0 +1,18 @@
+.navbar__pc {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .navbar{
+  width: 65% ;
+  }
+
+  .control__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 35%;
+
+  }
+}

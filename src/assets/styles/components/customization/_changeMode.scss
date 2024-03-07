@@ -1,0 +1,71 @@
+.mode {
+  &.dark {
+
+    .button__container{
+      background: #515151;
+      &:after {
+        transform: translateX(-120%) rotate(45deg);
+      }
+      .sun g path {
+        fill: #B86B00;
+      }
+    }
+  }
+
+  .button__container {
+    width: 48px;
+    height: 26px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    display: flex;
+    background: #E4A853;
+    position: relative;
+    transform: rotate(-90deg);
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+
+    &:after {
+      content: "";
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      left: 26px;
+      top: 4px;
+      border-radius: 18px;
+      background: #FFF;
+      filter: drop-shadow(-4px 0px 10px rgba(54, 54, 54, 0.25));
+      transition: .4s;
+    }
+
+     svg {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      flex-shrink: 0;
+      z-index: 100;
+    }
+
+     svg.sun {
+      left: 7px;
+      transition: .3s;
+      top: 7px;
+    }
+
+     svg.moon {
+      left: 29px;
+      top: 6px;
+      transition: .3s;
+       path{
+         fill: #B86B00;
+       }
+    }
+
+
+
+  }
+}
