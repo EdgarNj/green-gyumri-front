@@ -1,0 +1,31 @@
+#services {
+  width: 100%;
+  background: #FFF4DF;
+
+  .serviceBlock {
+    padding: 80px 0;
+    width: 100%;
+  }
+
+  section {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  article {
+    width: calc(100% / 4 - 25px);
+  }
+}
+
+
+.dark {
+  #services {
+    background: #131313;
+
+    h1 {
+      color: #FFF4DF;
+    }
+  }
+}

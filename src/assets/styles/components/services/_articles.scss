@@ -1,0 +1,46 @@
+.serviceArticle {
+  border-radius: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+  padding: 30px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #3C2100;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.25);
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #170f05d4;
+    border-radius: 17px;
+  }
+
+  h3 {
+    font-family: Roboto, sans-serif;
+    font-size: 35px;
+    color: #FFFFFF;
+    position: relative;
+  }
+}
+
+
+.dark{
+  .serviceArticle{
+    box-shadow: 0px 4px 10px 0px rgba(255, 255, 255, 0.25);
+    border-color: #b4ad9e;
+    border-width: 0.2px;
+ &:before{
+   background: rgba(82, 76, 76, 0.52);
+
+ }
+
+    h3{
+    }
+  }
+}
