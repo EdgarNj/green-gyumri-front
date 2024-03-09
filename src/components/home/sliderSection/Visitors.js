@@ -1,13 +1,18 @@
-import React, {useCallback, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {ReactComponent as SliderIcon} from "../../../assets/icons/homeSlider/visitors.svg";
 import {ReactComponent as OpenIcon} from "../../../assets/icons/homeSlider/polygon.svg";
 import {CSSTransition} from 'react-transition-group';
 import OutsideClickHandler from "react-outside-click-handler";
+import PropTypes from "prop-types";
+import {useTranslation} from "react-i18next";
 
-function Visitors() {
+function Visitors(props) {
+    const {changeVisitors} = props
     const [visitorCount, setVisitorCount] = useState(0)
     const [open, setOpen] = useState(false)
     const barRef = useRef(null)
+    const {t} = useTranslation()
+
     const handleChangeVisitor = useCallback((variant) => {
 
         if (variant === "plus" && visitorCount < 50) {
@@ -15,8 +20,12 @@ function Visitors() {
         } else if (variant === "minus" && visitorCount > 0) {
             setVisitorCount((state) => state - 1)
         }
-
     }, [visitorCount])
+
+    useEffect(() => {
+        changeVisitors(visitorCount)
+    }, [visitorCount]);
+
 
     const handleOpen = useCallback(() => {
         setOpen(!open)
@@ -34,7 +43,7 @@ function Visitors() {
                     <div className="title__part">
                         <SliderIcon/>
                         <p>
-                            Number of visitors
+                            {`${t("Number of visitors")} ${visitorCount && !open ? visitorCount : ""}`}
                         </p>
                     </div>
                     <button onClick={() => {
@@ -48,9 +57,6 @@ function Visitors() {
                         <div className="line"/>
                         <div className="menu__bar">
 
-                            <div className="visitors__title_box">
-                                <h3>Visitors</h3>
-                            </div>
                             <div className="change__visitor_box">
                                 <button className="change__visitor_btn" onClick={() => {
                                     handleChangeVisitor("minus")
@@ -75,3 +81,7 @@ function Visitors() {
 }
 
 export default Visitors;
+
+Visitors.propTypes = {
+    changeVisitors: PropTypes.func.isRequired
+}

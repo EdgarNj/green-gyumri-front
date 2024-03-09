@@ -1,17 +1,10 @@
 
-
 .header {
   padding: 15px 20px;
   width: 100%;
-  background-color: #ffffff;
+  background-color: var(--header-bg-color);
   box-shadow: 0 4px 30px 0 #64646440;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.dark{
-  .header{
-    background-color:#101010;
-  }
 }

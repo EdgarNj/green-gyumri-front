@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback, useState} from 'react';
 import Visitors from "./Visitors";
 import Arrival from "./Arrival";
 import {useMediaQuery} from "usehooks-ts";
@@ -8,8 +8,20 @@ function SliderContent(props) {
     // eslint-disable-next-line react/prop-types
     const {sliderTitle} = props
     const isMobile = useMediaQuery('(max-width: 1200px)')
+    // eslint-disable-next-line no-unused-vars
+    const [bookInfo, setBookInfo] = useState({
+        visitors: 0,
+        date: null
+    })
+    const handleNavigate = useCallback(() => {
 
 
+    }, [])
+
+    const handleChangeVisitors = useCallback(() => {
+
+
+    }, [])
 
 
     return (
@@ -17,9 +29,9 @@ function SliderContent(props) {
             <h1 className="slider__title">{sliderTitle}</h1>
             {!isMobile &&
                 <div className="book__part">
-                    <Visitors/>
+                    <Visitors changeVisitors={handleChangeVisitors}/>
                     <Arrival/>
-                    <BookButton/>
+                    <BookButton onClick={handleNavigate}/>
                 </div>}
         </div>
     );

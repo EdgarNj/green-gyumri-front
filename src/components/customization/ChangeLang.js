@@ -28,6 +28,7 @@ function ChangeLang() {
             dispatch(changeLanguage({lang}));
             i18n.changeLanguage(lang);
             setOpen(false);
+            window.location.reload()
         },
         [dispatch, i18n]
     );

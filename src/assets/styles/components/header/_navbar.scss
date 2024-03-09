@@ -3,29 +3,25 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  ul{
+
+  ul {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-    li{
 
-       a{
-         font-size: 18px;
-         font-weight: 300;
-         letter-spacing: 0.01em;
-         text-align: left;
-         color:#8E6D45;
-         transition: all 0.4s;
-         font-family: $font-varEn1;
-       }
-    };
-  }
+    li {
 
-}
-.dark{
-  .navbar{
-    a{
-      color: white;
+      a {
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: 0.01em;
+        text-align: left;
+        color: var(--header-nav-color);
+        transition: all 0.4s;
+        font-family: $font-varEn1;
+      }
     }
+  ;
   }
+
 }

@@ -1,0 +1,101 @@
+.home__wrapper {
+
+
+  .header {
+    position: absolute;
+    background-color: inherit;
+    z-index: 555;
+    box-shadow: none;
+
+    .logo {
+      color: rgba(255, 255, 255, 1);
+    }
+
+    .navbar__pc {
+      .contact {
+        svg path {
+          stroke: rgba(255, 255, 255, 1);
+        }
+
+        a {
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+
+      .lang_dropdown {
+
+
+        .polygon {
+          path {
+            fill: rgba(165, 165, 165, 1);
+          }
+        }
+
+
+        .lang path {
+          fill: rgba(255, 255, 255, 1);
+        }
+
+        &.open {
+          background-color: rgba(255, 255, 255, 1);
+
+
+          .lang__container {
+            span {
+              color: rgba(23, 15, 5, 1);
+            }
+          }
+
+          .langs {
+
+            .lang {
+              span {
+                color: rgba(34, 34, 34, 1);
+
+              }
+            }
+          }
+
+          .lang path {
+            fill: rgba(23, 15, 5, 1);
+          }
+        }
+
+        .lang path {
+          fill: rgba(255, 255, 255, 1);
+        }
+
+
+        .lang__container {
+          span {
+            color: white;
+          }
+        }
+
+
+        .box__container {
+          background-color: inherit;
+
+
+        }
+      }
+
+      .navbar ul li a {
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+
+
+    .mobile_nav_bar {
+      .toggleButton {
+        .line-1, .line-2, .line-3 {
+          background: #FFF4DF;
+        }
+      }
+    }
+
+
+  }
+
+
+}

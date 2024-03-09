@@ -1,16 +1,18 @@
-.logo{
+.logo {
   display: flex;
   align-items: center;
   width: 10%;
   cursor: pointer;
-  color: #8E6D45;
-  .firstLetter{
+  color: var(--header-logo-color);
+
+  .firstLetter {
     font-family: Script MT Bold;
     font-size: 55px;
     font-weight: 700;
     user-select: none;
   }
-  .secondLetter{
+
+  .secondLetter {
     font-family: Script MT Bold;
     font-size: 30px;
     font-weight: 700;
@@ -18,17 +20,12 @@
     user-select: none;
 
   }
-  .thirdLetter{
+
+  .thirdLetter {
     font-family: $font-varEn2;
     font-size: 30px;
     font-weight: 700;
     line-height: 20px;
     user-select: none;
-  }
-}
-
-.dark{
-  .logo{
-    color: #FFF4DF;
   }
 }

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: '1 Shelley Volante';
+    src: url('1ShelleyVolanteBold.eot');
+    src: url('1ShelleyVolanteBold.eot?#iefix') format('embedded-opentype'),
+        url('1ShelleyVolanteBold.woff2') format('woff2'),
+        url('1ShelleyVolanteBold.woff') format('woff'),
+        url('1ShelleyVolanteBold.ttf') format('truetype'),
+        url('1ShelleyVolanteBold.svg#1ShelleyVolanteBold') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+

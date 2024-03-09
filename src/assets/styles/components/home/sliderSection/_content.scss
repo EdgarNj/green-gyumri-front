@@ -14,13 +14,14 @@
 
 
   .slider__title {
-    font-family: Script MT Bold;
+    font-family: var(--home-slider-title-font);
     font-size: 70px;
-    font-weight: 700;
+    font-weight: var(--home-slider-title-weight);
+    font-style: var(--home-slider-title-style);
     line-height: 73px;
     letter-spacing: 0.085em;
     text-align: center;
-    color: #FFF4DF;
+    color:var(--home-slider-title-color);
     margin: 50px 0;
 
 
@@ -32,4 +33,5 @@
     display: flex;
 
   }
+
 }

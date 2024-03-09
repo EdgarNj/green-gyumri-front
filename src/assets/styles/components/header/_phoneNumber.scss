@@ -9,7 +9,7 @@
 
   svg {
     path {
-      stroke:#221607;
+      stroke:var(--header-address-color);
       transition: all .6s ease;
     }
   }
@@ -32,7 +32,7 @@
 
   a {
     text-decoration: none;
-    color: #221607;
+    color: var(--header-address-color);
     font-family: Roboto, sans-serif;
     font-size: 18px;
     font-style: normal;
@@ -40,20 +40,5 @@
     line-height: normal;
     letter-spacing: 0.36px;
     margin-left: 5px;
-  }
-}
-
-.dark {
-  .contact {
-    svg {
-      path {
-        stroke: #FFF4DF;
-        transition: all .6s ease;
-      }
-    }
-
-    a {
-      color: #FFF4DF;
-    }
   }
 }
