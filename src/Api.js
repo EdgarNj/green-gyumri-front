@@ -7,11 +7,11 @@ const api = axios.create({
 })
 
 api.interceptors.request.use(
-    function(config) {
+    function (config) {
         config.url += (config.url.indexOf('?') === -1 ? '?' : '&') + `lang=${localStorage.getItem("lang") || "hy"}`;
         return config;
     },
-    function(error) {
+    function (error) {
         return Promise.reject(error);
     }
 );
@@ -24,6 +24,10 @@ class Api {
     // SERVICES
     static getServicesData() {
         return api.get('services')
+    }
+
+    static getWorkersData(id) {
+        return api.get(`services/workers/${id}`)
     }
 }
 

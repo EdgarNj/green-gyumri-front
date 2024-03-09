@@ -1,14 +1,14 @@
 import React, {useCallback, useEffect} from 'react';
-import Wrapper from "../components/Wrapper";
+import Wrapper from "../../components/Wrapper";
 import {useTranslation} from "react-i18next";
-import ServiceArticle from "../components/services/servicesSection/ServiceArticle";
+import ServiceArticle from "../../components/services/ServiceArticle";
 import {useDispatch, useSelector} from "react-redux";
-import {getServicesDataRequest} from "../store/actions/services";
+import {getServicesDataRequest} from "../../store/actions/services";
 import {useNavigate} from "react-router-dom";
 
 function Services() {
     const {t} = useTranslation();
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const {services} = useSelector(state => state.services);
 
@@ -17,8 +17,9 @@ function Services() {
     }, []);
 
     const handleNavigateToItem = useCallback((id) => {
-        navigate(`${id}`)
-    }, [services])
+        navigate(`/services/workers/${id}`);
+    }, []);
+
     return (
         <Wrapper>
             <div id='services'>

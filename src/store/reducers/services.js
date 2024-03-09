@@ -1,8 +1,10 @@
 import {createReducer} from "@reduxjs/toolkit";
-import {getServicesDataRequest} from "../actions/services";
+import {getServicesDataRequest, getWorkersDataRequest} from "../actions/services";
 
 const initialState = {
-    services: []
+    services: [],
+    workers: [],
+    title: '',
 }
 
 const reducer = createReducer(initialState, (builder) => {
@@ -10,6 +12,11 @@ const reducer = createReducer(initialState, (builder) => {
         .addCase(getServicesDataRequest.fulfilled, (state, action) => {
             const {services} = action.payload;
             state.services = services;
+        })
+        .addCase(getWorkersDataRequest.fulfilled, (state, action) => {
+            const {workers,serviceTitle} = action.payload;
+            state.workers = workers;
+            state.title = serviceTitle;
         })
 })
 

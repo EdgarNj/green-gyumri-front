@@ -17,7 +17,7 @@ function NavBar() {
                     <NavLink to="/">{t("Recipes")}</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/">{t("Services")}</NavLink>
+                    <NavLink to="/services">{t("Services")}</NavLink>
                 </li>
                 <li>
                     <NavLink to="/">{t("Gyumri")}</NavLink>

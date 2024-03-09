@@ -1,0 +1,61 @@
+.workersCard {
+  width: 75%;
+  background: #221607;
+  border-radius: 20px;
+  padding: 30px;
+  color: #fff;
+  margin: 0 20px;
+  font-family: Roboto,sans-serif;
+
+  .item {
+    display: flex;
+    align-items: center;
+
+    .titleBlock {
+      margin-left: 10px;
+
+      h4 {
+        line-height: 30px;
+        font-size: 19px;
+        text-transform: capitalize;
+      }
+
+      p{
+        &::first-letter{
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  .box{
+
+    margin-top: 40px;
+
+    .textBlock{
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .text {
+      line-height: 23.44px;
+      font-size: 20px;
+      letter-spacing: 1px;
+
+      &.middle{
+      line-height: 16.45px;
+    }
+    }
+
+    .icon{
+      margin-right: 20px;
+    }
+  }
+
+  img {
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
