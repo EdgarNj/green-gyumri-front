@@ -59,7 +59,13 @@ $font-varEn2: Script MT Bold, sans-serif;
   --home-slider-booking-select-line-color: rgba(245, 238, 225, 1);
   --home-slider-booking-select-opened-bg: rgba(245, 238, 225, 1);
 
+  //SERVICES
+
+  --dark-shade-of-brown: rgba(60, 33, 0, 1);
+
   .dark {
+    --dark-shade-of-brown: rgb(50,50,50);
+
     --change-mod-bg-color: rgba(16, 16, 16, 1);
     --change-mod-color: rgba(255, 244, 223, 1);
     --header-address-color: rgba(255, 244, 223, 1);

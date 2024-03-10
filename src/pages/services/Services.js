@@ -1,9 +1,9 @@
 import React, {useCallback, useEffect} from 'react';
 import Wrapper from "../../components/Wrapper";
 import {useTranslation} from "react-i18next";
-import ServiceArticle from "../../components/services/ServiceArticle";
+import ServicesCard from '../../components/services/ServicesCard';
 import {useDispatch, useSelector} from "react-redux";
-import {getServicesDataRequest} from "../../store/actions/services";
+import {getServicesDataRequest} from "../../store/actions/services/services";
 import {useNavigate} from "react-router-dom";
 
 function Services() {
@@ -29,7 +29,7 @@ function Services() {
                         <section>
                             {
                                 services.map((s) => (
-                                    <ServiceArticle onClick={handleNavigateToItem} key={s.id} el={s}/>
+                                    <ServicesCard onClick={handleNavigateToItem} key={s.id} el={s}/>
                                 ))
                             }
                         </section>
