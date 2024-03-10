@@ -4,7 +4,7 @@
     border: 0;
     background: transparent;
     margin-bottom: 5px;
-    color: #4D4D4D;
+    color: var(--home-slider-calendar-week-name-color);
     font-family: Roboto, sans-serif;
     cursor: pointer;
     font-size: 16px;
@@ -19,7 +19,7 @@
     border: 0;
     background: transparent;
     margin-bottom: 5px;
-    color: #4D4D4D;
+    color: var(--home-slider-calendar-week-name-color);
     font-family: Roboto, sans-serif;
     cursor: pointer;
     font-size: 16px;
@@ -34,7 +34,7 @@
     border: 0;
     background: transparent;
     margin-bottom: 7px;
-    color: #221607;
+    color: var(--home-slider-calendar-week-name-color);
     font-family: Roboto, sans-serif;
     font-size: 18px;
     font-style: normal;
@@ -69,14 +69,14 @@
     svg path {
       width: 10px;
       height: 12px;
-      fill: rgba(34, 22, 7, 0.90);
+      fill: var(--home-slider-calendar-change-month-btn-color);
     }
   }
 
   .react-calendar__navigation__label__labelText {
     width: 82px;
     height: 45px;
-    color: #221607;
+    color: var(--home-slider-calendar-month-name-color);
     font-family: Roboto, sans-serif;
     font-size: 18px;
     font-style: normal;
@@ -96,7 +96,7 @@
 
     abbr {
       text-decoration: none;
-      color: #636363;
+      color: var(--home-slider-calendar-week-name-color);
       font-family: Roboto, sans-serif;
       font-size: 13px;
       font-style: normal;
@@ -118,20 +118,20 @@
 
   .disabled {
     border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.2);
     cursor: not-allowed;
 
     abbr {
-      color: red;
+      color: var(--home-slider-calendar-day-btn-disabled-color);
     }
   }
 
   .active {
-    background-color: green;
+    background-color: var(--home-slider-calendar-day-btn-active-bg);
+    width: 50%;
     border-radius: 20px;
 
     abbr {
-      color: white;
+      color: var(--home-slider-calendar-day-btn-active-color);
     }
   }
 
@@ -146,7 +146,7 @@
     transition: all 0.4s;
 
     abbr {
-      color: #00AE11;
+      color: var(--home-slider-calendar-day-btn-color);
       font-family: Roboto, sans-serif;
       font-size: 16px;
       font-style: normal;
@@ -158,47 +158,3 @@
   }
 
 }
-
-
-.dark {
-
-  .react-calendar__month-view__days {
-
-    .disabled {
-      background-color: white;
-    }
-  }
-
-
-  .react-calendar__decade-view__years {
-    .react-calendar__tile {
-      color: rgba(219, 219, 219, 1);
-    }
-  }
-
-
-  .react-calendar__navigation {
-    &__arrow {
-      svg path {
-        fill: rgba(219, 219, 219, 1);
-      }
-    }
-
-
-    &__label__labelText {
-
-      color: rgba(219, 219, 219, 1);
-    }
-  }
-
-
-  .react-calendar__month-view__weekdays {
-    &__weekday {
-      abbr {
-        color: rgba(161, 161, 161, 1);
-      }
-    }
-  }
-
-}
-

@@ -29,9 +29,12 @@ function Arrival() {
                     </button>
                 </div>
                 <CSSTransition unmountOnExit nodeRef={openRef} in={open} timeout={400} classNames="arrival__container">
+                   <>
+                    <div className="line"></div>
                     <div className="opened__bar">
                         <Calendar changeData={setData}/>
                     </div>
+                   </>
                 </CSSTransition>
             </OutsideClickHandler>
         </div>

@@ -3,38 +3,128 @@
   height: auto;
   display: flex;
   flex-direction: column;
-  border: 0.5px solid rgba(255, 244, 223, 0.49);
+  border: 0.5px solid var(--home-slider-booking-select-border-color);
+  transition: all 0.4s;
   margin-left: 0.5px;
-  box-shadow: 0 24px 30px 0 rgba(143, 143, 143, 0.25);
+  box-shadow: 0 24px 30px 0 var(--home-slider-booking-select-boxShdow);
   overflow: hidden;
 
-  &-enter {
-    height: 100%;
+  .line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--home-slider-booking-select-line-color);
 
+  }
+  &-exit,
+  &-enter-done {
     .closed__bar_btn {
       transform: rotate(180deg);
     }
   }
+  &-enter {
+    border-radius: 0 0 10px 10px;
+    height: 100%;
+
+
+
+    .closed__bar_name {
+
+      p {
+        color: var(--home-slider-booking-select-closed-color)
+      }
+    }
+
+    svg path {
+      fill: var(--home-slider-booking-select-closed-color)
+    }
+  }
 
   &-enter-active {
+    border-radius: 0 0 10px 10px;
     height: 350px;
-    background-color: white;
+    background-color: var(--home-slider-booking-select-opened-bg);
     transition: height 0.4s, opacity 0.4s;
+
+    .closed__bar {
+      background-color: var(--home-slider-booking-select-opened-bg);
+
+      .closed__bar_name {
+
+        p {
+          color: var(--home-slider-booking-select-closed-color)
+        }
+      }
+
+      svg path {
+        fill: var(--home-slider-booking-select-closed-color)
+      }
+    }
   }
 
   &-exit {
     height: 350px;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--home-slider-booking-select-opened-bg);
 
+    .closed__bar {
+
+      background-color: var(--home-slider-booking-select-opened-bg);
+
+      .closed__bar_name {
+
+        p {
+          color: var(--home-slider-booking-select-closed-color)
+        }
+      }
+
+      svg path {
+        fill: var(--home-slider-booking-select-closed-color)
+      }
+    }
   }
 
   &-exit-active {
+    border-radius: 0 0 10px 10px;
     height: 100%;
     transition: height 0.4s, opacity 0.4s;
+    background-color: var(--home-slider-booking-select-opened-bg);
 
+    .closed__bar {
+      background-color: var(--home-slider-booking-select-opened-bg);
+
+      .closed__bar_name {
+
+        p {
+          color: var(--home-slider-booking-select-closed-color)
+        }
+      }
+
+      svg path {
+        fill: var(--home-slider-booking-select-closed-color)
+      }
+    }
   }
 
   &-enter-done {
     height: 350px;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--home-slider-booking-select-opened-bg);
+
+    .closed__bar {
+      background-color: var(--home-slider-booking-select-opened-bg);
+
+      .closed__bar_name {
+
+        p {
+          color: var(--home-slider-booking-select-closed-color)
+        }
+      }
+
+
+      svg path {
+        fill: var(--home-slider-booking-select-closed-color)
+      }
+    }
 
     .closed__bar_btn {
       transform: rotate(180deg);
@@ -48,7 +138,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.52);
+  background-color: var(--home-slider-booking-select-closed-bg);
 
   padding: 0 10px;
 }
@@ -61,7 +151,7 @@
     font-family: Roboto, sans-serif;
     font-size: 18px;
     font-weight: 400;
-    color: #FFF4DF;
+    color: var(--home-slider-booking-select-closed-title-color);
     margin-left: 5px;
   }
 }
@@ -90,52 +180,10 @@
 
 .opened__bar {
   width: 100%;
-  height: 350px;
+  height: 300px;
   transition: all 0.4s;
   padding-bottom: 15px;
-  background-color: white;
+  background-color: var(--home-slider-booking-select-opened-bg);
   box-shadow: 0 24px 30px 0 rgba(143, 143, 143, 0.25);
-}
 
-
-.dark {
-  .arrival__container {
-    &-enter {
-      height: 100%;
-
-      .closed__bar_btn {
-        transform: rotate(180deg);
-      }
-    }
-
-    &-enter-active {
-      height: 350px;
-      background-color: black;
-      transition: height 0.4s, opacity 0.4s;
-    }
-
-    &-exit {
-      height: 350px;
-      background-color: black;
-    }
-
-    &-exit-active {
-      height: 100%;
-      transition: height 0.4s, opacity 0.4s;
-
-    }
-
-    &-enter-done {
-      height: 350px;
-      background-color: black;
-
-      .closed__bar_btn {
-        transform: rotate(180deg);
-      }
-    }
-  }
-
-  .opened__bar {
-    background-color: black;
-  }
 }
