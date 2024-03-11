@@ -1,13 +1,16 @@
 import customization from "./customization"
-import home from "./home"
+import homeSlider from "./home/slider"
 import services from "./services/services";
 import workers from "./services/workers";
-
+import homeAbout from "../reducers/home/about"
+import weProvide from "../reducers/home/weProvide"
 const reducers = {
     customization,
-    home,
+    homeSlider,
+    homeAbout,
     services,
-    workers
+    workers,
+    weProvide
 }
 
 export default reducers

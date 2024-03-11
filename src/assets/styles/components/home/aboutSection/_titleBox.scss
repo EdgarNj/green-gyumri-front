@@ -1,0 +1,39 @@
+
+.title__box {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  order: 1;
+  height: 100%;
+
+  h1 {
+    font-family: var(--home-main-title-font);
+    font-size: 65px;
+    font-weight: var(--home-main-title-weight);
+    font-style: var(--home-main-title-style);
+    letter-spacing: 0.045em;
+    text-align: left;
+    color: var(--home-about-title-color);
+    transition: all 0.4s;
+    line-height: 0;
+    margin-bottom: 25px;
+  }
+
+  p {
+    margin: 15px 0;
+    font-family: Roboto;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 63px;
+    letter-spacing: 0.045em;
+    text-align: left;
+    color: var(--home-about-desc-color);
+
+  }
+}
+
+
+.title__box.box2 {
+  order: 1;
+}
+

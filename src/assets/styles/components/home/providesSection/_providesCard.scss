@@ -1,0 +1,28 @@
+
+.provide__card {
+  height: 145px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid var(--home-provide-card-items-color);
+
+  img{
+    filter: grayscale(var(--home-provide-card-items-filter));
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  p {
+    text-align: center;
+    margin: 5px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: var(--home-provide-card-items-color);
+  }
+}

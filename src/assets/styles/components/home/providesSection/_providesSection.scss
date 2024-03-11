@@ -1,0 +1,32 @@
+
+.provides__section {
+  background-color: var(--home-provide-section-bg);
+  padding: 50px 20px;
+
+
+  .title {
+    font-family: var(--home-main-title-font);
+    font-size: 65px;
+    font-weight: var(--home-main-title-weight);
+    font-style: var(--home-main-title-style);
+    line-height: 80px;
+    letter-spacing: 0.045em;
+    text-align: center;
+    color: var(--home-provide-title-color);
+    transition: all 0.4s;
+    margin-bottom: 40px;
+  }
+
+  .provides__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+
+  }
+
+  .provide__card {
+    width: calc(280px);
+  }
+
+}

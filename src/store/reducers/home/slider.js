@@ -1,5 +1,5 @@
 import {createReducer} from "@reduxjs/toolkit";
-import {getHomeSliderDataRequest} from "../actions/home";
+import {getHomeSliderDataRequest} from "../../actions/home/slider";
 
 const initialState = {
     sliderData: {

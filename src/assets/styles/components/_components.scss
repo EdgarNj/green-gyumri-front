@@ -4,15 +4,11 @@
 @import "header/mobileNavbar";
 @import "header/toggleButton";
 @import "header/pcNavbar";
+
 @import "customization/changeLang";
 @import "customization/changeMode";
-@import "home/sliderSection/section";
-@import "home/sliderSection/slider";
-@import "home/sliderSection/arrival";
-@import "home/sliderSection/visitors";
-@import "home/sliderSection/calendar";
-@import "home/sliderSection/content";
-@import "home/sliderSection/button";
+
+@import "home/home";
 
 // services components
 @import "services/services";

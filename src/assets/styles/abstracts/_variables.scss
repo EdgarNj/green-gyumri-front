@@ -5,12 +5,19 @@ $font-varEn2: Script MT Bold, sans-serif;
 :root {
   --home-slider-title-font: Script MT Bold, sans-serif;
   --home-slider-title-weight: 700;
+
+  --home-main-title-font: Script MT Bold, sans-serif;
+  --home-main-title-weight: 700;
 }
 
 .ru {
   --home-slider-title-font: "1 Shelley Volante";
   --home-slider-title-style: italic;
   --home-slider-title-weight: bold;
+
+  --home-main-title-font: "1 Shelley Volante";
+  --home-main-title-style: italic;
+  --home-main-title-weight: bold;
 }
 
 
@@ -18,6 +25,10 @@ $font-varEn2: Script MT Bold, sans-serif;
   --home-slider-title-font: SHK Dzeragir;
   --home-slider-title-style: italic;
   --home-slider-title-weight: normal;
+
+  --home-main-title-font: SHK Dzeragir;
+  --home-main-title-style: italic;
+  --home-main-title-weight: normal;
 }
 
 :root {
@@ -59,12 +70,21 @@ $font-varEn2: Script MT Bold, sans-serif;
   --home-slider-booking-select-line-color: rgba(245, 238, 225, 1);
   --home-slider-booking-select-opened-bg: rgba(245, 238, 225, 1);
 
+  --home-about-section-bg: rgba(255, 244, 223, 1);
+  --home-about-title-color: rgba(60, 33, 0, 1);
+  --home-about-desc-color: rgba(142, 109, 69, 1);
+
+  --home-provide-section-bg: rgba(255, 255, 255, 1);
+  --home-provide-title-color: rgba(60, 33, 0, 1);
+  --home-provide-card-items-color: rgba(170, 132, 83, 1);
+  --home-provide-card-items-filter: 0;
+
   //SERVICES
 
   --dark-shade-of-brown: rgba(60, 33, 0, 1);
 
   .dark {
-    --dark-shade-of-brown: rgb(50,50,50);
+    --dark-shade-of-brown: rgb(50, 50, 50);
 
     --change-mod-bg-color: rgba(16, 16, 16, 1);
     --change-mod-color: rgba(255, 244, 223, 1);
@@ -95,5 +115,15 @@ $font-varEn2: Script MT Bold, sans-serif;
     --home-slider-calendar-day-btn-disabled-color: rgba(82, 82, 82, 1);
     --home-slider-calendar-month-name-color: rgba(219, 219, 219, 1);
     --home-slider-calendar-week-name-color: rgba(161, 161, 161, 1);
+
+    --home-about-section-bg: rgba(16, 16, 16, 1);
+    --home-about-title-color: rgba(255, 244, 223, 1);
+    --home-about-desc-color: rgba(219, 219, 219, 1);
+
+    --home-provide-section-bg: rgba(19, 19, 19, 1);
+    --home-provide-title-color: rgba(255, 246, 216, 1);
+    --home-provide-card-items-color: rgba(255, 246, 216, 1);
+    --home-provide-card-items-filter: 40%;
+
   }
 }

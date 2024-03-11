@@ -1,0 +1,12 @@
+.about__box {
+  background-color: var(--home-about-section-bg);
+
+  padding: 100px 20px;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+
+}

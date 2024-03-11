@@ -1,5 +1,5 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
-import Api from "../../Api";
+import Api from "../../../Api";
 
 // eslint-disable-next-line no-unused-vars
 export const getHomeSliderDataRequest = createAsyncThunk("home/get-home-homeSlider-data", async (_, thunkAPI) => {
