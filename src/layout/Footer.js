@@ -3,13 +3,13 @@ import GreenGyumriLogo from "../components/GreenGyumriLogo";
 
 function Footer() {
     return (
-        <Footer>
+        <footer>
             <div className="container">
                 <figure>
                     <GreenGyumriLogo/>
                 </figure>
             </div>
-        </Footer>
+        </footer>
     );
 }
 
