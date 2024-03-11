@@ -2,8 +2,8 @@ import axios from "axios";
 
 
 const api = axios.create({
-    baseURL: "http://192.168.10.146:4000",
-    // baseURL: "http://localhost:4000",
+    // baseURL: "http://192.168.10.120:4000",
+    baseURL: "http://localhost:4000",
 })
 
 api.interceptors.request.use(
@@ -29,13 +29,13 @@ class Api {
 
     // SERVICES
     static getServicesData() {
-        return api.get('services')
+        return api.get('services',{params:{limit:25}})
     }
 
     static getWorkersData(data) {
-        const {id,limit,page} = data;
+        const {id,page} = data;
 
-        return api.get(`services/workers/${id}`,{params:{limit,page}})
+        return api.get(`services/workers/${id}`,{params:{limit:10,page}})
     }
 }
 

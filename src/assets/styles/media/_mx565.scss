@@ -1,3 +1,33 @@
+// SERVICES
+
+#services {
+
+  .servicesCard {
+    width: 100%;
+  }
+
+  .workersCard{
+    width: 85%;
+
+    .titleBlock{
+      p{
+        font-size: 16px !important;
+      }
+    }
+
+    .textBlock{
+      .icon{
+        margin-right: 20px !important;
+      }
+
+    }
+  }
+}
+
+h1{
+  font-size: 55px;
+}
+
 .provides__section {
 
   .provide__card {

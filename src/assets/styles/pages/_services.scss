@@ -1,6 +1,6 @@
 #services {
   width: 100%;
-  background: var(--home-slider-bg-color);
+  background: var(--services-bg-color);
 
   .serviceBlock {
     padding: 80px 0;
@@ -9,14 +9,14 @@
 
     .arrow{
       position: absolute;
-      left: 0;
-      font-size: 55px;
+      left: 33px;
+      font-size: 75px;
       cursor: pointer;
       color: var(--header-logo-color);
     }
   }
 
-  section {
+  .serviceMain {
     margin-top: 80px;
     display: flex;
     flex-wrap: wrap;
@@ -29,21 +29,6 @@
       &:active{
         cursor: grabbing;
       }
-
-      .slide-current .workersCard{
-        background: var(--dark-shade-of-brown);
-      }
-    }
-  }
-}
-
-
-.dark {
-  #services {
-    background: #131313;
-
-    h1 {
-      color: #FFF4DF;
     }
   }
 }

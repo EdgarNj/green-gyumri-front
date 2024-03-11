@@ -1,0 +1,25 @@
+// SERVICES
+
+#services {
+
+  .serviceBlock {
+    padding: 40px 0;
+  }
+
+  .serviceMain {
+    margin-top: 40px;
+
+    .slide{
+      display: flex ;
+      justify-content: center;
+    }
+  }
+
+  .servicesCard {
+    width: calc(100% / 2 - 25px);
+  }
+
+  .arrow{
+    font-size: 60px !important;
+  }
+}

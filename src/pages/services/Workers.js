@@ -2,20 +2,51 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {useNavigate, useParams} from "react-router-dom";
 import Wrapper from "../../components/Wrapper";
 import {useDispatch, useSelector} from "react-redux";
-import {clearWorkersData, getWorkersDataRequest} from "../../store/actions/services/workers";
+import {getWorkersDataRequest} from "../../store/actions/services/workers";
 import WorkersCard from "../../components/services/WorkersCard";
 import Carousel from "nuka-carousel";
+import {useMediaQuery} from "usehooks-ts";
 
 function Workers() {
+    const maxWidth992 = useMediaQuery('(max-width: 992px)');
+    const minWidth993 = useMediaQuery('(min-width: 993px)');
+    const maxWidth565 = useMediaQuery('(max-width: 565px)');
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const {id} = useParams();
     const {workers, title, totalPages} = useSelector(state => state.workers);
+
     const [page, setPage] = useState(1);
-    const limit = 10;
+    const [slidesToShow, setSlidesToShow] = useState(3);
+    const [cellAlign, setCellAlign] = useState('center');
 
     useEffect(() => {
-        dispatch(getWorkersDataRequest({id, limit, page}));
+        if (maxWidth992) {
+            setSlidesToShow(2);
+            setCellAlign('null');
+        }
+
+        if (minWidth993) {
+            setSlidesToShow(3);
+            setCellAlign('center');
+        }
+
+        if (maxWidth565) {
+            setSlidesToShow(1);
+        }
+    }, [maxWidth992, maxWidth565, minWidth993]);
+
+    useEffect(() => {
+        (async () => {
+            const {payload} = await dispatch(getWorkersDataRequest({id, page}));
+
+            if (payload.status !== 'ok') {
+                navigate('/')
+            }
+        })()
+
+
     }, [id, page]);
 
     const handleChangePage = useCallback(() => {
@@ -25,9 +56,8 @@ function Workers() {
     }, [page, totalPages])
 
     const handleGoBack = useCallback(() => {
-        dispatch(clearWorkersData())
         navigate('/services');
-    }, [])
+    }, []);
 
     return (
         <Wrapper>
@@ -36,22 +66,21 @@ function Workers() {
                     <div className='serviceBlock'>
                         <span className='arrow' onClick={() => handleGoBack()}> &#8249; </span>
                         <h1>{title}</h1>
-                        <section>
+                        <section className='serviceMain'>
                             {
                                 workers.length > 0 && (
-                                    <Carousel
-                                        animation='zoom'
-                                        cellAlign='center'
-                                        slideIndex={1}
-                                        beforeSlide={(currentIndex, nextIndex) => {
-                                            nextIndex >= workers.length - 4 ? handleChangePage() : null;
-                                        }}
-                                        slidesToShow={3}
-                                        defaultControlsConfig={{
-                                            prevButtonClassName: 'noneBtn',
-                                            nextButtonClassName: 'noneBtn',
-                                            pagingDotsStyle: {display: 'none'},
-                                        }}>
+                                    <Carousel speed={200}
+                                              cellAlign={cellAlign}
+                                              slideIndex={1}
+                                              beforeSlide={(currentIndex, nextIndex) => {
+                                                  nextIndex >= workers.length - 4 ? handleChangePage() : null;
+                                              }}
+                                              slidesToShow={slidesToShow}
+                                              defaultControlsConfig={{
+                                                  prevButtonClassName: 'noneBtn',
+                                                  nextButtonClassName: 'noneBtn',
+                                                  pagingDotsStyle: {display: 'none'},
+                                              }}>
                                         {workers.map(el => (
                                             <WorkersCard key={el.id} el={el}/>
                                         ))}
@@ -67,5 +96,3 @@ function Workers() {
 }
 
 export default Workers;
-
-

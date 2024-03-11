@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from "../layout/Header";
 import {useSelector} from "react-redux";
+import Footer from "../layout/Footer";
 
 function Wrapper(props) {
     const {children, className} = props
@@ -11,6 +12,7 @@ function Wrapper(props) {
         <div className={`wrapper ${className} ${mode} ${lang}`}>
             <Header/>
             {children}
+            <Footer/>
         </div>
     );
 }

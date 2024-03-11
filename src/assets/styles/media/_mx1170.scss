@@ -29,3 +29,33 @@
   }
 
 }
+
+
+//SERVICES
+
+.serviceMain{
+  padding: 0 20px;
+
+  .servicesCard{
+    width: calc(100% / 3 - 25px);
+  }
+}
+
+//WORKERS
+
+.workersCard{
+  padding: 22px;
+
+  p{
+    font-size: 16px !important;
+  }
+
+  .titleBlock{
+    h4{
+      font-size: 20px !important;
+    }
+
+
+  }
+}
+

@@ -1,11 +1,12 @@
 .workersCard {
   width: 86%;
-  background: #221607;
+  background: var(--worker-card-bg-color);
   border-radius: 20px;
   padding: 33px;
-  color: #fff;
-  font-family: Roboto,sans-serif;
-
+  color: var(--worker-card-color);
+  font-family: Roboto, sans-serif;
+  transform: scale(0.8);
+  transition: all 0.6s;
 
   .item {
     display: flex;
@@ -16,23 +17,27 @@
 
       h4 {
         line-height: 30px;
-        font-size: 19px;
+        font-size: 23px;
         text-transform: capitalize;
+        font-weight: 500;
       }
 
-      p{
-        &::first-letter{
+      p {
+
+        font-weight: 100;
+        font-size: 18px;
+
+        &::first-letter {
           text-transform: capitalize;
         }
       }
     }
   }
 
-  .box{
-
+  .box {
     margin-top: 40px;
 
-    .textBlock{
+    .textBlock {
       display: flex;
       margin-top: 20px;
     }
@@ -41,13 +46,14 @@
       line-height: 23.44px;
       font-size: 20px;
       letter-spacing: 1px;
+      font-weight: 400;
 
-      &.middle{
-      line-height: 16.45px;
-    }
+      &.middle {
+        line-height: 16.45px;
+      }
     }
 
-    .icon{
+    .icon {
       margin-right: 20px;
     }
   }
@@ -58,4 +64,9 @@
     border-radius: 50%;
     object-fit: cover;
   }
+}
+
+.slide-current .workersCard {
+  background: var(--worker-center-card-bg-color);
+  transform: scale(1);
 }

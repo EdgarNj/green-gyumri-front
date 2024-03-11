@@ -5,6 +5,7 @@ import ServicesCard from '../../components/services/ServicesCard';
 import {useDispatch, useSelector} from "react-redux";
 import {getServicesDataRequest} from "../../store/actions/services/services";
 import {useNavigate} from "react-router-dom";
+import {clearWorkersData} from "../../store/actions/services/workers";
 
 function Services() {
     const {t} = useTranslation();
@@ -14,6 +15,7 @@ function Services() {
 
     useEffect(() => {
         dispatch(getServicesDataRequest());
+        dispatch(clearWorkersData());
     }, []);
 
     const handleNavigateToItem = useCallback((id) => {
@@ -26,7 +28,7 @@ function Services() {
                 <div className='container'>
                     <div className='serviceBlock'>
                         <h1>{t('Services')}</h1>
-                        <section>
+                        <section className='serviceMain'>
                             {
                                 services.map((s) => (
                                     <ServicesCard onClick={handleNavigateToItem} key={s.id} el={s}/>

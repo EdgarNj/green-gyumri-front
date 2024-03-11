@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect} from 'react';
 import HomeSlider from "./HomeSlider";
 import SliderContent from "./SliderContent";
 import {useDispatch, useSelector} from "react-redux";
