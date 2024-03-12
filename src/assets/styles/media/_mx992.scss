@@ -7,7 +7,7 @@
   }
 
   .serviceMain {
-    margin-top: 40px;
+    margin-top: 70px;
 
     .slide{
       display: flex ;
@@ -21,5 +21,28 @@
 
   .arrow{
     font-size: 60px !important;
+  }
+}
+
+
+// FOOTER
+
+#footer{
+  .navbar{
+    margin: 40px 0;
+
+    ul{
+      flex-direction: column;
+      align-items: center;
+
+      li{
+        margin: 5px 0;
+      }
+    }
+  }
+
+  .nav .nav_block:nth-child(1){
+    width: 100%;
+    justify-content: space-evenly;
   }
 }

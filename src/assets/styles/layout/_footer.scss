@@ -1,0 +1,26 @@
+#footer {
+  background: var(--footer-bg-color);
+  width: 100%;
+  padding: 50px 0 65px;
+
+  .content{
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar{
+    width: 65%;
+    margin: 80px 0 60px;
+
+    a{
+      color: #fff;
+    }
+  }
+
+  .logo{
+    color: #fff;
+  }
+}

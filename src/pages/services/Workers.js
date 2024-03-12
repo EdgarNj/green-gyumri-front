@@ -71,7 +71,7 @@ function Workers() {
                                 workers.length > 0 && (
                                     <Carousel speed={200}
                                               cellAlign={cellAlign}
-                                              slideIndex={1}
+                                              slideIndex={0}
                                               beforeSlide={(currentIndex, nextIndex) => {
                                                   nextIndex >= workers.length - 4 ? handleChangePage() : null;
                                               }}

@@ -5,7 +5,6 @@ export const getHomeAboutDataRequest = createAsyncThunk("home/get-home-aboutSect
     try {
         const {data} = await Api.getHomeAboutData()
 
-        console.log(data)
         return data
     } catch (e) {
         console.log(e)

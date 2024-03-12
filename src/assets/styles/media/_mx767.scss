@@ -8,6 +8,7 @@
 // SERVICES
 
 #services{
+
   .workersCard{
     width: 100%;
     margin: 0 10px;
@@ -33,9 +34,34 @@
 }
 
 
+//FOOTER
+
+#footer{
+
+  .navbar{
+    margin: 35px 0;
+  }
+
+  .nav .nav_block:nth-child(1){
+    flex-direction: column;
+
+    & .nav_list:nth-child(2){
+      margin: 10px 0;
+  }
+
+    & .nav_list:last-child{
+      font-size: 20px;
+
+      svg{
+        width: 18px;
+      }
+    }
+  }
+}
+
 
 h1{
-  font-size: 60px;
+  font-size: 55px;
 }
 
 

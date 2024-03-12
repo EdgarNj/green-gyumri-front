@@ -4,13 +4,17 @@ import services from "./services/services";
 import workers from "./services/workers";
 import homeAbout from "../reducers/home/about"
 import weProvide from "../reducers/home/weProvide"
+import contacts from "./footer/contacts";
+import weblinks from "./footer/weblinks";
 const reducers = {
     customization,
     homeSlider,
     homeAbout,
     services,
     workers,
-    weProvide
+    weProvide,
+    contacts,
+    weblinks
 }
 
 export default reducers

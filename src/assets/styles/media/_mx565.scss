@@ -6,17 +6,17 @@
     width: 100%;
   }
 
-  .workersCard{
+  .workersCard {
     width: 85%;
 
-    .titleBlock{
-      p{
+    .titleBlock {
+      p {
         font-size: 16px !important;
       }
     }
 
-    .textBlock{
-      .icon{
+    .textBlock {
+      .icon {
         margin-right: 20px !important;
       }
 
@@ -24,8 +24,62 @@
   }
 }
 
-h1{
-  font-size: 55px;
+
+//FOOTER
+
+#footer {
+
+  .content {
+    padding: 0 20px;
+    display: block;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: start;
+
+    li{
+      margin: 5px 0;
+    }
+  }
+
+  .nav {
+
+    align-items: start;
+    width: 100%;
+
+    .nav_block {
+
+      &:first-child {
+        align-items: start;
+
+        .nav_list:last-child{
+          font-size: 25px;
+        }
+      }
+
+      &:nth-child(2){
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 25px;
+
+          .nav_list{
+          margin: 0;
+        }
+      }
+
+      img{
+        width: 31px;
+      }
+    }
+
+
+  }
+}
+
+
+h1 {
+  font-size: 30px;
 }
 
 .provides__section {

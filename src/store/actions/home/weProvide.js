@@ -5,7 +5,6 @@ export const getHomeProvidesDataRequest = createAsyncThunk("home/get-home-provid
     try {
         const {data} = await Api.getHomeProvidesData()
 
-        console.log(data)
         return data
     } catch (e) {
         console.log(e)
