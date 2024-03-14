@@ -1,0 +1,18 @@
+
+.celebrate__section {
+  background-color: var(--home-celebrate-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 50px 20px;
+  .title {
+    font-family: var(--home-main-title-font);
+    font-style: var(--home-main-title-style);
+    font-weight: var(--home-main-title-weight);
+    font-size: 65px;
+    line-height: 46px;
+    letter-spacing: 0.045em;
+  }
+
+}

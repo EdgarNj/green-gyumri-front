@@ -1,14 +1,13 @@
 {
-    "Home": "Home",
-    "Book": "Book",
-    "Recipes": "Recipes",
-    "Services": "Services",
-    "Gyumri": "Gyumri",
-    "Arrival": "Arrival",
-    "Number of visitors": "Number of visitors",
-
-    "About us": "About us",
-    "We provide:": "We provide:"
-
-
+  "Home": "Home",
+  "Book": "Book",
+  "Recipes": "Recipes",
+  "Services": "Services",
+  "Gyumri": "Gyumri",
+  "Arrival": "Arrival",
+  "Number of visitors": "Number of visitors",
+  "About us": "About us",
+  "We provide:": "We provide:",
+  "Join us to celebrate": "Join us to celebrate",
+  "Our news": "Our news"
 }

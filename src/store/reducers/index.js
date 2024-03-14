@@ -6,6 +6,9 @@ import homeAbout from "../reducers/home/about"
 import weProvide from "../reducers/home/weProvide"
 import contacts from "./footer/contacts";
 import weblinks from "./footer/weblinks";
+import celebrate from "./home/celebrate"
+import news from "./home/news"
+
 import foods from "./foods/foods";
 import compositions from "./foods/compositions";
 const reducers = {
@@ -17,6 +20,8 @@ const reducers = {
     weProvide,
     contacts,
     weblinks,
+    celebrate,
+    news,
     foods,
     compositions
 }
