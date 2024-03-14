@@ -51,6 +51,13 @@ class Api {
         return api.get('/links', {params: {limit: 10}});
     }
 
+    // FOODS
+    static getFoodsData() {
+        return api.get('/foods');
+    }
+    static getCompositionsData(foodId) {
+        return api.get('/foods/compositions',{params:{foodId}});
+    }
 }
 
 export default Api;

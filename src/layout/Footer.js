@@ -10,7 +10,7 @@ function Footer() {
     const dispatch = useDispatch();
     const {contacts} = useSelector(state => state.contacts);
     const {weblinks} = useSelector(state => state.weblinks);
-    console.log(weblinks, 878787)
+
     useEffect(() => {
         dispatch(getContactsDataRequest());
         dispatch(getWeblinksDataRequest());

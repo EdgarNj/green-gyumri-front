@@ -39,14 +39,13 @@ function Workers() {
 
     useEffect(() => {
         (async () => {
-            const {payload} = await dispatch(getWorkersDataRequest({id, page}));
-
-            if (payload.status !== 'ok') {
+            try {
+                await dispatch(getWorkersDataRequest({id, page}));
+            } catch (e) {
+                console.error(e);
                 navigate('/')
             }
         })()
-
-
     }, [id, page]);
 
     const handleChangePage = useCallback(() => {
@@ -59,6 +58,21 @@ function Workers() {
         navigate('/services');
     }, []);
 
+    const options = {
+        speed: 200,
+        cellAlign,
+        slideIndex: 0,
+        beforeSlide: (currentIndex, nextIndex) => {
+            nextIndex >= workers.length - 4 ? handleChangePage() : null;
+        },
+        slidesToShow,
+        defaultControlsConfig: {
+            prevButtonClassName: 'noneBtn',
+            nextButtonClassName: 'noneBtn',
+            pagingDotsStyle: {display: 'none'},
+        },
+    }
+
     return (
         <Wrapper>
             <div id='services'>
@@ -69,18 +83,7 @@ function Workers() {
                         <section className='serviceMain'>
                             {
                                 workers.length > 0 && (
-                                    <Carousel speed={200}
-                                              cellAlign={cellAlign}
-                                              slideIndex={0}
-                                              beforeSlide={(currentIndex, nextIndex) => {
-                                                  nextIndex >= workers.length - 4 ? handleChangePage() : null;
-                                              }}
-                                              slidesToShow={slidesToShow}
-                                              defaultControlsConfig={{
-                                                  prevButtonClassName: 'noneBtn',
-                                                  nextButtonClassName: 'noneBtn',
-                                                  pagingDotsStyle: {display: 'none'},
-                                              }}>
+                                    <Carousel {...options} >
                                         {workers.map(el => (
                                             <WorkersCard key={el.id} el={el}/>
                                         ))}

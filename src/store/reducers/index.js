@@ -6,6 +6,8 @@ import homeAbout from "../reducers/home/about"
 import weProvide from "../reducers/home/weProvide"
 import contacts from "./footer/contacts";
 import weblinks from "./footer/weblinks";
+import foods from "./foods/foods";
+import compositions from "./foods/compositions";
 const reducers = {
     customization,
     homeSlider,
@@ -14,7 +16,9 @@ const reducers = {
     workers,
     weProvide,
     contacts,
-    weblinks
+    weblinks,
+    foods,
+    compositions
 }
 
 export default reducers

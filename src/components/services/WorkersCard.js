@@ -1,7 +1,7 @@
 import React from 'react';
 import {ReactComponent as Message} from "../../assets/icons/services/message.svg";
 import {ReactComponent as Phone} from "../../assets/icons/services/phone.svg";
-import {ReactComponent as Websitie} from "../../assets/icons/services/website.svg";
+import {ReactComponent as Website} from "../../assets/icons/services/website.svg";
 import PropTypes from "prop-types";
 
 function WorkersCard(props) {
@@ -30,7 +30,7 @@ function WorkersCard(props) {
                     </p>
                 </div>
                 <div className='textBlock'>
-                    <span className='icon'>{<Websitie/>}</span>
+                    <span className='icon'>{<Website/>}</span>
                     <p className='text'>
                         {el.website}
                     </p>

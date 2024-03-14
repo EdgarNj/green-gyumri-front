@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from "./pages/Home";
 import Services from "./pages/services/Services";
 import Workers from "./pages/services/Workers";
+import Foods from "./pages/foods/Foods";
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
                 <Route element={<Home/>} path="/"/>
                 <Route element={<Services/>} path="/services"/>
                 <Route element={<Workers/>} path="/services/workers/:id"/>
+                <Route element={<Foods/>} path="/foods"/>
             </Routes>
         </BrowserRouter>
     );

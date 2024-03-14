@@ -1,0 +1,40 @@
+#block {
+  width: 100%;
+  margin: 20px auto;
+  border-top: 1px solid rgba(98, 98, 98, 1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+  .item_block {
+    display: flex;
+    font-weight: 400;
+    color: var(--compositions-color);
+    margin-bottom: 20px;
+
+    div{
+      width: 50%;
+    }
+  }
+
+  .item_name{
+    display: flex;
+    align-items: center;
+
+    .name{
+      letter-spacing: 2px;
+      font-size: 20px;
+    }
+  }
+
+  .item_info{
+    text-align: right;
+    font-size: 18px;
+  }
+
+  img{
+    width: 28px;
+    margin-right: 15px;
+    object-fit: cover;
+  }
+}
