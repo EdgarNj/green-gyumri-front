@@ -21,7 +21,10 @@ const reducer = createReducer(initialState, (builder) => {
             if (state.workers.length){
                 state.workers = []
             }
-            state.title = '';
+            if (state.title){
+
+                state.title = '';
+            }
         })
 })
 
