@@ -1,0 +1,12 @@
+.map__section {
+  width: 100%;
+  height: 80vh;
+  background-color: var(--home-map-bg);
+
+  .map {
+    width: 100%;
+    height: 100%;
+    filter: invert(var(--home-map-color-invert));
+    border: 0;
+  }
+}

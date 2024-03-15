@@ -5,6 +5,8 @@ import AboutSection from "../components/home/about/AboutSection";
 import ProvidesSection from "../components/home/weProvides/ProvidesSection";
 import CelebrateSection from "../components/home/celebrate/CelebrateSection";
 import NewsSection from "../components/home/newsSection/NewsSection";
+import MapSection from "../components/home/mapSection/MapSection";
+import LastSection from "../components/home/lastSection/LastSection";
 
 function Home() {
 
@@ -15,6 +17,8 @@ function Home() {
             <ProvidesSection/>
             <CelebrateSection/>
             <NewsSection/>
+            <MapSection/>
+            <LastSection/>
         </Wrapper>
     );
 }

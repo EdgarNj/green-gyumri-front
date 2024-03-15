@@ -80,10 +80,20 @@ $font-varEn2: Script MT Bold, sans-serif;
   --home-provide-card-items-filter: 0;
 
 
-  --home-celebrate-bg:rgba(255, 244, 223, 1);
-  --home-celebrate-item-title-color:rgba(142, 109, 69, 1);
---home-news-bg:rgba(34, 22, 7, 1);
-  --home-news-title-color:rgba(228, 168, 83, 1);
+  --home-celebrate-bg: rgba(255, 244, 223, 1);
+  --home-celebrate-item-title-color: rgba(142, 109, 69, 1);
+  --home-news-bg: rgba(34, 22, 7, 1);
+  --home-news-title-color: rgba(228, 168, 83, 1);
+  --home-news-item-bg: rgba(255, 255, 255, 1);
+  --home-news-item-title-color: rgba(34, 22, 7, 1);
+  --home-news-item-desc-color: rgba(142, 109, 69, 1);
+  --home-map-bg: rgba(19, 19, 19, 1);
+
+  --home-last-section-bg:rgba(255, 244, 223, 1);
+  --home-last-section-title-color:rgba(255, 255, 255, 1);
+  --home-last-section-link-color:rgba(255, 255, 255, 1);
+  --home-last-section-link-bg:rgba(170, 132, 83, 1);
+
 
   //SERVICES
 
@@ -93,8 +103,6 @@ $font-varEn2: Script MT Bold, sans-serif;
   --services-card-title-color: #fff;
   --services-card-after-bg-color: #170f05d4;
   --services-card-box-shadow-color: rgba(0, 0, 0, 0.25);
-
-
 
 
   //WORKERS
@@ -145,14 +153,25 @@ $font-varEn2: Script MT Bold, sans-serif;
     --home-slider-calendar-month-name-color: rgba(219, 219, 219, 1);
     --home-slider-calendar-week-name-color: rgba(161, 161, 161, 1);
 
-    --home-celebrate-bg:rgba(16, 16, 16, 1);
-    --home-celebrate-item-title-color:rgba(188, 149, 102, 1);
+    --home-celebrate-bg: rgba(16, 16, 16, 1);
+    --home-celebrate-item-title-color: rgba(188, 149, 102, 1);
 
 
-    --home-news-bg:rgba(19, 19, 19, 1);
+    --home-news-bg: rgba(19, 19, 19, 1);
 
-    --home-news-title-color:rgba(255, 246, 216, 1);
+    --home-news-title-color: rgba(255, 246, 216, 1);
+    --home-news-item-bg: rgba(16, 16, 16, 0.85);
+    --home-news-item-title-color: rgba(219, 219, 219, 1);
+    --home-news-item-desc-color: rgba(255, 244, 223, 1);
 
+
+    --home-map-bg: rgba(255, 244, 223, 1);
+    --home-map-color-invert: 90%;
+
+    --home-last-section-bg:rgba(19, 19, 19, 1);
+    --home-last-section-title-color:rgba(255, 246, 216, 1);
+    --home-last-section-link-color:rgba(255, 244, 223, 1);
+    --home-last-section-link-bg:rgba(170, 132, 83, 1);
 
     //SERVICES
     --services-bg-color: rgba(19, 19, 19, 1);
@@ -161,7 +180,7 @@ $font-varEn2: Script MT Bold, sans-serif;
     --services-card-box-shadow-color: rgba(70, 61, 61, 0.25);
 
     //WORKERS
-    --worker-center-card-bg-color: rgb(50,50,50);
+    --worker-center-card-bg-color: rgb(50, 50, 50);
     --worker-card-bg-color: rgba(33, 33, 33, 1);
 
     // ALL TITLES

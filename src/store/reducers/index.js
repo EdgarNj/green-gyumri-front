@@ -8,9 +8,12 @@ import contacts from "./footer/contacts";
 import weblinks from "./footer/weblinks";
 import celebrate from "./home/celebrate"
 import news from "./home/news"
+import lastBlock from "./home/lastBlock"
+import book from "./book/book"
 
 import foods from "./foods/foods";
 import compositions from "./foods/compositions";
+
 const reducers = {
     customization,
     homeSlider,
@@ -23,7 +26,9 @@ const reducers = {
     celebrate,
     news,
     foods,
-    compositions
+    compositions,
+    lastBlock,
+    book
 }
 
 export default reducers

@@ -35,7 +35,7 @@ function CelebrateSection() {
                     next={fetchMoreData}
                     hasMore={true}
                     endMessage={null}
-                    scrollThreshold={0.6}
+                    scrollThreshold={0.9}
                     loader={null}>
                     {!isMobile ? data.map((celebrate, i) => (
                         <CelebrateBoxPc isRevers={i % 2 === 0} key={celebrate.id} datum={celebrate}/>

@@ -17,6 +17,7 @@ function Arrival() {
     };
 
     return (
+
         <div ref={openRef} className="arrival__container">
             <OutsideClickHandler onOutsideClick={handleOutsideClick}>
                 <div className="closed__bar">
@@ -29,12 +30,12 @@ function Arrival() {
                     </button>
                 </div>
                 <CSSTransition unmountOnExit nodeRef={openRef} in={open} timeout={400} classNames="arrival__container">
-                   <>
-                    <div className="line"></div>
-                    <div className="opened__bar">
-                        <Calendar changeData={setData}/>
-                    </div>
-                   </>
+                    <>
+                        <div className="line"></div>
+                        <div className="opened__bar">
+                            <Calendar changeData={setData}/>
+                        </div>
+                    </>
                 </CSSTransition>
             </OutsideClickHandler>
         </div>
