@@ -15,19 +15,19 @@ import Calculate from "../../components/foods/Calculate";
 function Foods() {
     const dispatch = useDispatch();
     const {t} = useTranslation();
-
-    const {foods} = useSelector(state => state.foods);
+    const {foods, totalPages} = useSelector(state => state.foods);
     const {compositions} = useSelector(state => state.compositions);
 
     const [title, setTitle] = useState('');
-    const [slideIndex, setSlideIndex] = useState(0);
+    const [slideIndex, setSlideIndex] = useState(1);
     const [value, setValue] = useState(0);
     const [visitorsNumber, setVisitorsNumber] = useState(0);
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(false);
+    const [page, setPage] = useState(1);
 
     const options = {
         cellAlign: 'center',
-        slideIndex: 0,
+        slideIndex: slideIndex,
         afterSlide: (currentIndex) => {
             setSlideIndex(currentIndex);
             setShow(false)
@@ -44,8 +44,8 @@ function Foods() {
     }
 
     useEffect(() => {
-        dispatch(getFoodsDataRequest())
-    }, []);
+        dispatch(getFoodsDataRequest({page}))
+    }, [page]);
 
     useEffect(() => {
         if (foods.length) {
@@ -54,44 +54,46 @@ function Foods() {
             setTitle(food.name);
             dispatch(getCompositionsDataRequest({id: food.id}));
         }
-    }, [foods, slideIndex]);
-    console.log(1111111)
+
+        if (slideIndex + 4 >= foods.length && totalPages > page) {
+            setPage(page + 1)
+        }
+    }, [foods, slideIndex, totalPages]);
+
     return (
         <Wrapper>
             <div id='food'>
-                <div className="container">
-                    <h1>{t('Recipes')}</h1>
-                    <section className='foodContent'>
-                        <Carousel {...options}>
-                            {
-                                foods.map((f, i) => (
-                                    <FoodCard key={f.id}
-                                              show={show}
-                                              slideIndex={slideIndex}
-                                              index={i}
-                                              food={f}
-                                              change={setShow}/>
-                                ))
-                            }
-                        </Carousel>
-                        <h2 className='title'>{title}</h2>
+                <h1>{t('Recipes')}</h1>
+                <section className='foodContent'>
+                    <Carousel {...options}>
                         {
-                            compositions.length ?
-                                <div className="bottom_block">
-                                    {
-                                        show &&
-                                        <Calculate
-                                            value={+value}
-                                            changeVisitors={setVisitorsNumber}
-                                            change={setValue}
-                                        />
-                                    }
-                                    <Compositions data={compositions} percent={+value} visitorsNumber={visitorsNumber}/>
-                                </div>
-                                : null
+                            foods.map((f, i) => (
+                                <FoodCard key={f.id}
+                                          show={show}
+                                          slideIndex={slideIndex}
+                                          index={i}
+                                          food={f}
+                                          change={setShow}/>
+                            ))
                         }
-                    </section>
-                </div>
+                    </Carousel>
+                    <h2 className='title'>{title}</h2>
+                    {
+                        compositions.length ?
+                            <div className="bottom_block">
+                                {
+                                    show &&
+                                    <Calculate
+                                        value={+value}
+                                        changeVisitors={setVisitorsNumber}
+                                        change={setValue}
+                                    />
+                                }
+                                <Compositions data={compositions} percent={+value} visitorsNumber={visitorsNumber}/>
+                            </div>
+                            : null
+                    }
+                </section>
             </div>
         </Wrapper>
     );

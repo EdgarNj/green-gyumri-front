@@ -49,7 +49,7 @@ function Workers() {
     }, [id, page]);
 
     const handleChangePage = useCallback(() => {
-        if (page !== totalPages) {
+        if (totalPages > page) {
             setPage(page + 1);
         }
     }, [page, totalPages])
