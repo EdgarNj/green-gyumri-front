@@ -1,0 +1,24 @@
+.calculateBlock {
+  width: 95%;
+  padding-bottom: 40px;
+
+  .visitors__container {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .range_block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+    .range_title {
+      cursor: pointer;
+      color: var(--input-title-color);
+    }
+  }
+}
+
+

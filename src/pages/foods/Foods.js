@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Wrapper from "../../components/Wrapper";
 import {useTranslation} from "react-i18next";
 import {useDispatch, useSelector} from "react-redux";
@@ -8,7 +8,8 @@ import {ReactComponent as Left} from '../../assets/icons/foods/left.svg';
 import {ReactComponent as Right} from '../../assets/icons/foods/right.svg';
 import {getCompositionsDataRequest} from "../../store/actions/foods/compositions";
 import Compositions from "../../components/foods/Compositions";
-import Visitors from "../../components/home/sliderSection/Visitors";
+import FoodCard from "../../components/foods/FoodCard";
+import Calculate from "../../components/foods/Calculate";
 
 
 function Foods() {
@@ -21,11 +22,16 @@ function Foods() {
     const [title, setTitle] = useState('');
     const [slideIndex, setSlideIndex] = useState(0);
     const [value, setValue] = useState(0);
+    const [visitorsNumber, setVisitorsNumber] = useState(0);
+    const [show, setShow] = useState(true);
 
     const options = {
         cellAlign: 'center',
         slideIndex: 0,
-        afterSlide: (currentIndex) => setSlideIndex(currentIndex),
+        afterSlide: (currentIndex) => {
+            setSlideIndex(currentIndex);
+            setShow(false)
+        },
         cellSpacing: 20,
         slidesToShow: 3,
         defaultControlsConfig: {
@@ -49,11 +55,7 @@ function Foods() {
             dispatch(getCompositionsDataRequest({id: food.id}));
         }
     }, [foods, slideIndex]);
-
-    const handleChangeValue = useCallback((val) => {
-        setValue(val)
-    }, [])
-
+    console.log(1111111)
     return (
         <Wrapper>
             <div id='food'>
@@ -62,40 +64,32 @@ function Foods() {
                     <section className='foodContent'>
                         <Carousel {...options}>
                             {
-                                foods.map(f => (
-                                    <figure key={f.id} className="imgBlock">
-                                        <img src={f.image.path} alt={f.name}/>
-                                    </figure>
+                                foods.map((f, i) => (
+                                    <FoodCard key={f.id}
+                                              show={show}
+                                              slideIndex={slideIndex}
+                                              index={i}
+                                              food={f}
+                                              change={setShow}/>
                                 ))
                             }
                         </Carousel>
                         <h2 className='title'>{title}</h2>
-                        {compositions.length ?
-                            <div className="bottom_block">
-                                <Visitors changeVisitors={() => {
-                                }}/>
-                                <label className='range_title'>
-                                    <input
-                                        value={value}
-                                        type="range"
-                                        min={0}
-                                        max={40}
-                                        step={20}
-                                        onChange={(e) => setValue(e.target.value)}
-                                    />
-                                    <span onClick={() => {
-                                        handleChangeValue(0)
-                                    }}>min</span>
-                                    <span onClick={() => {
-                                        handleChangeValue(20)
-                                    }}>mid</span>
-                                    <span onClick={() => {
-                                        handleChangeValue(40)
-                                    }}>max</span>
-                                </label>
-                                <Compositions data={compositions}/>
-                            </div>
-                            : null}
+                        {
+                            compositions.length ?
+                                <div className="bottom_block">
+                                    {
+                                        show &&
+                                        <Calculate
+                                            value={+value}
+                                            changeVisitors={setVisitorsNumber}
+                                            change={setValue}
+                                        />
+                                    }
+                                    <Compositions data={compositions} percent={+value} visitorsNumber={visitorsNumber}/>
+                                </div>
+                                : null
+                        }
                     </section>
                 </div>
             </div>
