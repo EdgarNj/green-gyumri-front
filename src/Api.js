@@ -32,13 +32,22 @@ class Api {
     static getHomeCelebrateData(page) {
         return api.get(`home/celebrate?limit=3&page=${page}`)
     }
+
     static getHomeNewsData() {
         return api.get(`home/news`)
     }
+
     static getHomeLastBlockData() {
         return api.get(`home/last-block`)
     }
 
+    //BOOK START
+
+    static getReservedDaysData() {
+        return api.get(`book/list`)
+    }
+
+    //BOOK END
     // SERVICES
     static getServicesData() {
         return api.get('/services', {params: {limit: 25}})
@@ -64,8 +73,9 @@ class Api {
     static getFoodsData() {
         return api.get('/foods');
     }
+
     static getCompositionsData(foodId) {
-        return api.get('/foods/compositions',{params:{foodId}});
+        return api.get('/foods/compositions', {params: {foodId}});
     }
 }
 

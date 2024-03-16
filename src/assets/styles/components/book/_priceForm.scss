@@ -1,0 +1,87 @@
+.price__form_box {
+
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .write__info_box {
+    width: 50%;
+    height: 100%;
+  }
+
+  .previous__price {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: flex-end;
+  }
+
+
+}
+
+
+.arrival__book_select {
+  width: 100%;
+  position: relative;
+  height: 70px;
+  margin-bottom: 10px;
+
+  .arrival__container {
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--book-arrival-bg);
+    position: absolute;
+    z-index: 999;
+    box-shadow: var(--book-arrival-boxShdow);
+
+
+  }
+
+  .closed__bar {
+    background-color: var(--book-arrival-bg);
+  }
+
+  .closed__bar .closed__bar_name {
+    svg .path {
+      fill: var(--book-arrival-closed-item-color);
+    }
+
+    p {
+      color: var(--book-arrival-closed-item-color);
+    }
+  }
+
+  .closed__bar_btn {
+    svg {
+      path {
+        fill: var(--book-arrival-closed-item-color);
+      }
+    }
+  }
+
+}
+
+
+.visitors__book_select {
+  width: 100%;
+  height: 70px;
+
+  .visitors__container {
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--book-arrival-bg);
+    box-shadow: var(--book-arrival-boxShdow);
+
+    .banner__container {
+      svg path {
+        fill: var(--book-arrival-closed-item-color);
+      }
+
+      .title__part p {
+        color: var(--book-arrival-closed-item-color);
+      }
+    }
+  }
+}

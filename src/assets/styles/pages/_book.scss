@@ -1,29 +1,67 @@
 .book__section {
   width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: space-between;
+  height: 120vh;
+  position: relative;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    height: 100%;
+
+  }
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.88);
+  }
+
+  .book__section_bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  }
 
   .title__box {
     width: 50%;
     height: 100%;
+    z-index: 5;
 
+    h2 {
+      font-family: var(--home-main-title-font);
+      font-weight: var(--home-main-title-weight);
+      font-style: var(--home-main-title-style);
+      font-size: 100px;
+      letter-spacing: 0.085em;
+      text-align: left;
+      color: var(--book-title-color);
+    }
   }
 
   .forms__container {
     display: flex;
     width: 50%;
     height: 100%;
+    z-index: 3;
+    background-color: var(--book-section-bg);
+    border-radius: 20px;
+    padding: 35px;
 
-
-    .price__form_box {
-      width: 100%;
-      height: 100%;
-    }
-
-    .write__info_box {
-      width: 100%;
-      height: 100%;
-    }
   }
 }

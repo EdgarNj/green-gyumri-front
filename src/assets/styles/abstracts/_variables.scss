@@ -89,12 +89,25 @@ $font-varEn2: Script MT Bold, sans-serif;
   --home-news-item-desc-color: rgba(142, 109, 69, 1);
   --home-map-bg: rgba(19, 19, 19, 1);
 
-  --home-last-section-bg:rgba(255, 244, 223, 1);
-  --home-last-section-title-color:rgba(255, 255, 255, 1);
-  --home-last-section-link-color:rgba(255, 255, 255, 1);
-  --home-last-section-link-bg:rgba(170, 132, 83, 1);
+  --home-last-section-bg: rgba(255, 244, 223, 1);
+  --home-last-section-title-color: rgba(255, 255, 255, 1);
+  --home-last-section-link-color: rgba(255, 255, 255, 1);
+  --home-last-section-link-bg: rgba(170, 132, 83, 1);
 
 
+  // Book
+  --book-title-color: rgba(255, 244, 223, 1);
+  --book-section-bg: rgba(255, 255, 255, 1);
+
+  --book-arrival-bg: rgba(255, 255, 255, 1);
+  --book-arrival-closed-item-color: rgba(60, 33, 0, 1);
+  --book-arrival-open-button-color: rgba(138, 138, 138, 1);
+  --book-arrival-boxShdow: 0px 4px 30px 0px rgba(164, 164, 164, 0.25);
+  --book-previus-select-item-color: rgba(22, 22, 22, 1);
+  --book-previus-closed-bg: rgba(255, 255, 255, 1);
+
+  --book-previus-box-shodow: 0px 4px 30px 0px rgba(164, 164, 164, 0.25);
+  --book-previus-icon-invert: 0;
   //SERVICES
 
   --services-bg-color: rgba(255, 244, 223, 1);
@@ -168,11 +181,26 @@ $font-varEn2: Script MT Bold, sans-serif;
     --home-map-bg: rgba(255, 244, 223, 1);
     --home-map-color-invert: 90%;
 
-    --home-last-section-bg:rgba(19, 19, 19, 1);
-    --home-last-section-title-color:rgba(255, 246, 216, 1);
-    --home-last-section-link-color:rgba(255, 244, 223, 1);
-    --home-last-section-link-bg:rgba(170, 132, 83, 1);
+    --home-last-section-bg: rgba(19, 19, 19, 1);
+    --home-last-section-title-color: rgba(255, 246, 216, 1);
+    --home-last-section-link-color: rgba(255, 244, 223, 1);
+    --home-last-section-link-bg: rgba(170, 132, 83, 1);
 
+
+    //Book
+    --book-title-color: rgba(255, 244, 223, 1);
+    --book-section-bg: rgba(19, 19, 19, 1);
+    --book-arrival-bg: rgba(33, 33, 33, 1);
+    --book-arrival-closed-item-color: rgba(219, 219, 219, 1);
+    --book-arrival-open-button-color: rgba(219, 219, 219, 1);
+    --book-arrival-boxShdow: 0px 4px 30px 0px rgba(164, 164, 164, 0);
+
+
+    --book-previus-select-item-color: rgba(219, 219, 219, 1);
+    --book-previus-closed-bg: rgba(33, 33, 33, 1);
+    --book-previus-box-shodow: 0px 4px 30px 0px rgba(164, 164, 164, 0);
+
+    --book-previus-icon-invert: 1;
     //SERVICES
     --services-bg-color: rgba(19, 19, 19, 1);
     --services-arrow-color: rgba(255, 244, 223, 1);

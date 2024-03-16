@@ -21,7 +21,7 @@
     height: 140px;
     opacity: 1;
     border-radius: 10px 0 10px 10px;
-    background-color: var(--home-slider-booking-select-opened-bg);
+    background-color: var(--home-slider-booking-select-opened-bg) !important;
 
     .banner__container .button svg path,
     .banner__container .title__part svg path {
@@ -38,7 +38,7 @@
   &-enter-done {
     height: 140px;
     border-radius: 10px 0 10px 10px;
-    background-color: var(--home-slider-booking-select-opened-bg);
+    background-color: var(--home-slider-booking-select-opened-bg) !important;
 
     .button {
       transform: rotate(180deg);
@@ -132,8 +132,8 @@
 
   .change__visitor_box {
     display: flex;
-    width: 35%;
-    justify-content: space-between;
+    width: 90%;
+    justify-content: space-around;
   }
 
   .change__visitor_btn {
