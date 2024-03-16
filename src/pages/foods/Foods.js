@@ -33,7 +33,7 @@ function Foods() {
             setShow(false)
         },
         cellSpacing: 20,
-        slidesToShow: 3,
+        slidesToShow: 1.1,
         defaultControlsConfig: {
             pagingDotsStyle: {display: 'none'},
             prevButtonClassName: "prev",
