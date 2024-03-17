@@ -24,6 +24,44 @@
   }
 }
 
+//FOODS
+#food {
+  .foodContent {
+
+    .title {
+      font-size: 30px;
+    }
+
+    .slider-container .slider-frame .slide {
+      transform: scale(0.8);
+
+      .recipeBtn {
+        transform: none;
+      }
+
+      &.slide-current {
+        transform: scale(1);
+      }
+    }
+
+    .bottom_block {
+      width: 100%;
+
+      #block {
+        padding: 20px 0;
+
+        .item_name .name {
+          font-size: 16px;
+        }
+
+        .item_info {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
 
 //FOOTER
 
@@ -38,7 +76,7 @@
     flex-direction: column;
     align-items: start;
 
-    li{
+    li {
       margin: 5px 0;
     }
   }
@@ -53,22 +91,22 @@
       &:first-child {
         align-items: start;
 
-        .nav_list:last-child{
+        .nav_list:last-child {
           font-size: 25px;
         }
       }
 
-      &:nth-child(2){
+      &:nth-child(2) {
         width: 100%;
         justify-content: space-between;
         margin-top: 25px;
 
-          .nav_list{
+        .nav_list {
           margin: 0;
         }
       }
 
-      img{
+      img {
         width: 31px;
       }
     }
@@ -88,5 +126,4 @@ h1 {
     width: 146px;
     margin: 10px;
   }
-
 }

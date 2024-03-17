@@ -83,7 +83,7 @@ function Workers() {
                         <section className='serviceMain'>
                             {
                                 workers.length > 0 && (
-                                    <Carousel {...options} >
+                                    <Carousel {...options}>
                                         {workers.map(el => (
                                             <WorkersCard key={el.id} el={el}/>
                                         ))}

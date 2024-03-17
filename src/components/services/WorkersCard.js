@@ -19,21 +19,21 @@ function WorkersCard(props) {
             <div className='box'>
                 <div className='textBlock'>
                     <span className='icon'>{<Phone/>}</span>
-                    <p className='text'>
+                    <a href={`tel:${el.phone}`} className='text'>
                         {el.phone}
-                    </p>
+                    </a>
                 </div>
                 <div className='textBlock'>
                     <span className='icon'>{<Message/>}</span>
-                    <p className='text middle'>
+                    <a href={`mailto:${el.email}`} className='text middle'>
                         {el.email}
-                    </p>
+                    </a>
                 </div>
                 <div className='textBlock'>
                     <span className='icon'>{<Website/>}</span>
-                    <p className='text'>
+                    <a href={el.website} className='text' target='blank'>
                         {el.website}
-                    </p>
+                    </a>
                 </div>
             </div>
         </figure>

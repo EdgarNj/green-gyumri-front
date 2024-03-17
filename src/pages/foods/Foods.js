@@ -10,9 +10,13 @@ import {getCompositionsDataRequest} from "../../store/actions/foods/compositions
 import Compositions from "../../components/foods/Compositions";
 import FoodCard from "../../components/foods/FoodCard";
 import Calculate from "../../components/foods/Calculate";
+import {useMediaQuery} from "usehooks-ts";
 
 
 function Foods() {
+    const minWidth1401 = useMediaQuery('(min-width: 1401px)');
+    const maxWidth1400 = useMediaQuery('(max-width: 1400px)');
+    const maxWidth565 = useMediaQuery('(max-width: 565px)');
     const dispatch = useDispatch();
     const {t} = useTranslation();
     const {foods, totalPages} = useSelector(state => state.foods);
@@ -24,16 +28,17 @@ function Foods() {
     const [visitorsNumber, setVisitorsNumber] = useState(0);
     const [show, setShow] = useState(false);
     const [page, setPage] = useState(1);
+    const [slidesToShow, setSlidesToShow] = useState(2.7);
 
     const options = {
         cellAlign: 'center',
         slideIndex: slideIndex,
-        afterSlide: (currentIndex) => {
-            setSlideIndex(currentIndex);
-            setShow(false)
+        beforeSlide: (startIndex,endIndex) => {
+            setSlideIndex(endIndex);
+            setShow(false);
         },
         cellSpacing: 20,
-        slidesToShow: 1.1,
+        slidesToShow: slidesToShow,
         defaultControlsConfig: {
             pagingDotsStyle: {display: 'none'},
             prevButtonClassName: "prev",
@@ -60,12 +65,26 @@ function Foods() {
         }
     }, [foods, slideIndex, totalPages]);
 
+    useEffect(() => {
+        if (maxWidth1400) {
+            setSlidesToShow(1.7);
+        }
+
+        if (minWidth1401) {
+            setSlidesToShow(2.7);
+        }
+
+        if (maxWidth565) {
+            setSlidesToShow(1);
+        }
+    }, [maxWidth1400,minWidth1401,maxWidth565]);
+
     return (
         <Wrapper>
             <div id='food'>
                 <h1>{t('Recipes')}</h1>
                 <section className='foodContent'>
-                    <Carousel {...options}>
+                    <Carousel {...options} >
                         {
                             foods.map((f, i) => (
                                 <FoodCard key={f.id}

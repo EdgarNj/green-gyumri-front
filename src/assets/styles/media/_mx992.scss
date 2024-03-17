@@ -1,5 +1,4 @@
 // SERVICES
-
 #services {
 
   .serviceBlock {
@@ -25,8 +24,17 @@
 }
 
 
-// FOOTER
+//FOODS
+#food{
+  padding: 30px 20px;
 
+  .foodContent{
+    margin: 30px 0 0;
+  }
+}
+
+
+// FOOTER
 #footer{
   .navbar{
     margin: 40px 0;

@@ -8,12 +8,14 @@
   box-shadow: 0 4px 30px 0 var(--services-card-box-shadow-color);
   cursor: pointer;
   width: calc(100% / 4 - 25px);
+  transition: all 0.4s;
 
   &:hover {
     border-color: var(--services-card-hover-color);
 
     &:after {
       background: var(--services-bg-color);
+      transition: all 0.4s;
     }
 
     .cardTitle {
