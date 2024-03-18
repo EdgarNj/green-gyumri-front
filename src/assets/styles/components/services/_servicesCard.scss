@@ -8,6 +8,21 @@
   box-shadow: 0 4px 30px 0 var(--services-card-box-shadow-color);
   cursor: pointer;
   width: calc(100% / 4 - 25px);
+  transition: all 0.4s;
+
+  &:hover {
+    border-color: var(--services-card-hover-color);
+
+    &:after {
+      background: var(--services-bg-color);
+      transition: all 0.4s;
+    }
+
+    .cardTitle {
+      color: var(--services-card-hover-color);
+    }
+
+  }
 
   &:after {
     content: "";
@@ -20,7 +35,7 @@
     border-radius: 17px;
   }
 
-  img{
+  img {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -37,13 +52,5 @@
     color: var(--services-card-title-color);
     position: relative;
     z-index: 1;
-  }
-}
-
-
-.dark{
-  .servicesCard{
-    box-shadow: 0 4px 10px 0 var(--services-card-box-shadow-color);
-    border-width: 0.2px;
   }
 }

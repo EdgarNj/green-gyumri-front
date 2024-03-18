@@ -24,6 +24,44 @@
   }
 }
 
+//FOODS
+#food {
+  .foodContent {
+
+    .title {
+      font-size: 30px;
+    }
+
+    .slider-container .slider-frame .slide {
+      transform: scale(0.8);
+
+      .recipeBtn {
+        transform: none;
+      }
+
+      &.slide-current {
+        transform: scale(1);
+      }
+    }
+
+    .bottom_block {
+      width: 100%;
+
+      #block {
+        padding: 20px 0;
+
+        .item_name .name {
+          font-size: 16px;
+        }
+
+        .item_info {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
 
 //FOOTER
 
@@ -88,7 +126,6 @@ h1 {
     width: 146px;
     margin: 10px;
   }
-
 }
 
 //book start

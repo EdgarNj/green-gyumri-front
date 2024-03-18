@@ -1,10 +1,28 @@
 .calculateBlock {
-  width: 95%;
-  padding-bottom: 40px;
+  width: 100%;
+  padding: 0 15px 40px;
+  border-bottom: 1px solid rgba(98, 98, 98, 1);;
 
   .visitors__container {
     width: 100%;
     border-radius: 10px;
+    background: var(--foods-visitors-bg-color);
+    box-shadow: 0 4px 30px 0 rgba(125, 125, 125, 0.25);
+
+    .banner__container {
+      .title__part {
+        svg path {
+          fill: var(--foods-visitor-people-svg-color);
+        }
+
+        p {
+          color: var(--foods-visitors-text-color);
+        }
+      }
+      .button svg path{
+        fill: var(--foods-visitors-text-color);
+      }
+    }
   }
 
   .range_block {

@@ -83,12 +83,12 @@ class Api {
     }
 
     // FOODS
-    static getFoodsData() {
-        return api.get('/foods');
+    static getFoodsData(page) {
+        return api.get('/foods', {params: {limit: 20, page}});
     }
 
     static getCompositionsData(foodId) {
-        return api.get('/foods/compositions', {params: {foodId}});
+        return api.get('/foods/compositions', {params: {foodId, limit: 100}});
     }
 }
 

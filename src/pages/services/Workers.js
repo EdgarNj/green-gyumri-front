@@ -49,7 +49,7 @@ function Workers() {
     }, [id, page]);
 
     const handleChangePage = useCallback(() => {
-        if (page !== totalPages) {
+        if (totalPages > page) {
             setPage(page + 1);
         }
     }, [page, totalPages])
@@ -83,7 +83,7 @@ function Workers() {
                         <section className='serviceMain'>
                             {
                                 workers.length > 0 && (
-                                    <Carousel {...options} >
+                                    <Carousel {...options}>
                                         {workers.map(el => (
                                             <WorkersCard key={el.id} el={el}/>
                                         ))}
