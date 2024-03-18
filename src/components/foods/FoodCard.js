@@ -1,12 +1,17 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import foodImage from '../../assets/images/foods.jpg';
 
 function FoodCard(props) {
     const {food: f, index: i, slideIndex, show, change} = props;
 
     return (
         <figure className="foodCard">
-            <img src={f.image.path} alt={f.name}/>
+            <img
+                src={f.image.path}
+                alt={f.name}
+                onError={(e) => e.target.src = foodImage}
+            />
             <div className='btnBlock'>
                 <button
                     className={`recipeBtn  ${slideIndex === i && show ? null : 'active'}`}

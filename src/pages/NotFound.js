@@ -4,7 +4,6 @@ import {useDispatch, useSelector} from "react-redux";
 import {getHomeSliderDataRequest} from "../store/actions/notFound";
 import {useTranslation} from "react-i18next";
 import {useMediaQuery} from "usehooks-ts";
-import image from '../assets/images/book.png';
 
 function NotFound() {
     const {t} = useTranslation();
@@ -28,7 +27,7 @@ function NotFound() {
                 {
                     maxWidth992 && (
                         <>
-                            <img className='bg' src={image} alt="image"/>
+                            <img className='bg' src={images[0].path} alt="image"/>
                             <div className='layer'></div>
                         </>
                     )

@@ -3,6 +3,7 @@ import {ReactComponent as Message} from "../../assets/icons/services/message.svg
 import {ReactComponent as Phone} from "../../assets/icons/services/phone.svg";
 import {ReactComponent as Website} from "../../assets/icons/services/website.svg";
 import PropTypes from "prop-types";
+import person from '../../assets/images/person.png';
 
 function WorkersCard(props) {
     const {el} = props;
@@ -10,7 +11,7 @@ function WorkersCard(props) {
     return (
         <figure className='workersCard'>
             <figcaption className='item'>
-                <img src={el.image.path} alt="img"/>
+                <img src={el.image.path + 1} alt="img" onError={(e) => e.target.src = person} />
                 <div className='titleBlock'>
                     <h4> {el.fullName} </h4>
                     <p> {el.workplace} </p>
