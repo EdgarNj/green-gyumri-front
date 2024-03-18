@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Wrapper from "../../components/Wrapper";
 import {useTranslation} from "react-i18next";
 import {useDispatch, useSelector} from "react-redux";
-import {getFoodsDataRequest} from "../../store/actions/foods/foods";
+import {clearFoodsData, getFoodsDataRequest} from "../../store/actions/foods/foods";
 import Carousel from "nuka-carousel";
 import {ReactComponent as Left} from '../../assets/icons/foods/left.svg';
 import {ReactComponent as Right} from '../../assets/icons/foods/right.svg';
@@ -33,7 +33,7 @@ function Foods() {
     const options = {
         cellAlign: 'center',
         slideIndex: slideIndex,
-        beforeSlide: (startIndex,endIndex) => {
+        beforeSlide: (startIndex, endIndex) => {
             setSlideIndex(endIndex);
             setShow(false);
         },
@@ -49,7 +49,11 @@ function Foods() {
     }
 
     useEffect(() => {
-        dispatch(getFoodsDataRequest({page}))
+        dispatch(getFoodsDataRequest({page}));
+
+        return () => {
+            dispatch(clearFoodsData())
+        }
     }, [page]);
 
     useEffect(() => {
@@ -77,7 +81,7 @@ function Foods() {
         if (maxWidth565) {
             setSlidesToShow(1);
         }
-    }, [maxWidth1400,minWidth1401,maxWidth565]);
+    }, [maxWidth1400, minWidth1401, maxWidth565]);
 
     return (
         <Wrapper>

@@ -5,6 +5,7 @@ import Services from "./pages/services/Services";
 import Workers from "./pages/services/Workers";
 import Foods from "./pages/foods/Foods";
 import Booking from "./pages/book/Booking";
+import NotFound from "./pages/NotFound";
 
 function App() {
     return (
@@ -12,14 +13,18 @@ function App() {
             <Routes>
                 <Route element={<Home/>} path="/"/>
                 <Route element={<Booking/>} path="/book"/>
-                    <Route element={<Services/>} path="/services"/>
-                    <Route element={<Workers/>} path="/services/workers/:id"/>
-                    <Route element={<Foods/>} path="/foods"/>
-                </Routes>
-                    </BrowserRouter>
-                    );
-                }
+                <Route element={<Services/>} path="/services"/>
+                <Route element={<Workers/>} path="/services/workers/:id"/>
+                <Route element={<Foods/>} path="/foods"/>
 
-                    export default App;
+
+
+                <Route path="*" element={<NotFound/>} />
+            </Routes>
+        </BrowserRouter>
+    );
+}
+
+export default App;
 
 

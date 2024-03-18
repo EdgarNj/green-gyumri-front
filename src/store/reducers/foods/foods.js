@@ -1,5 +1,5 @@
 import {createReducer} from "@reduxjs/toolkit";
-import {getFoodsDataRequest} from "../../actions/foods/foods";
+import {clearFoodsData, getFoodsDataRequest} from "../../actions/foods/foods";
 
 const initialState = {
     foods: [],
@@ -12,6 +12,10 @@ const reducer = createReducer(initialState, (builder) => {
             const {foods, totalPages} = action.payload;
             state.foods.push(...foods);
             state.totalPages = totalPages;
+        })
+        .addCase(clearFoodsData,(state) => {
+            state.foods = [];
+            state.totalPages = 0;
         })
 })
 

@@ -110,6 +110,8 @@ $font-varEn2: Script MT Bold, sans-serif;
   --book-previus-icon-invert: 0;
 
 
+
+
   --book-input-border-color: rgba(231, 231, 231, 1);
   --book-active-border-color: rgba(170, 132, 83, 1);
   --book-error-border-color: rgba(255, 89, 89, 1);
@@ -126,7 +128,6 @@ $font-varEn2: Script MT Bold, sans-serif;
   --book-send-btn-bg:rgba(170, 132, 83, 1);
   --book-send-btn-color:rgba(255, 255, 255, 1);
   //SERVICES
-
   --services-bg-color: rgba(255, 244, 223, 1);
   --services-arrow-color: rgba(255, 244, 223, 1);
   --services-card-border-color: #3C2100;
@@ -149,10 +150,16 @@ $font-varEn2: Script MT Bold, sans-serif;
 
   //FOODS
   --compositions-color: rgba(87, 63, 33, 1);
-  --input-title-color: rgba(170, 132, 83, 1);
   --foods-visitor-people-svg-color: rgba(170, 132, 83, 1);
   --foods-visitors-text-color: rgba(138, 138, 138, 1);
   --foods-visitors-bg-color: #fff;
+
+
+  //NOT_FOUND
+  --not-found-bg-color:rgba(255, 244, 223, 1);
+  --not-found-text-color: black;
+  --not-found-layer-bg-color: #a6a6a6a6;
+
 
   .dark {
     --dark-shade-of-brown: rgb(50, 50, 50);
@@ -258,10 +265,14 @@ $font-varEn2: Script MT Bold, sans-serif;
 
     //FOODS
     --compositions-color: #FFF4DF;
-    --input-title-color: #FFF4DF;
     --foods-visitor-people-svg-color: #fff;
     --foods-visitors-text-color: #fff;
-    --foods-visitors-bg-color: rgba(0, 0, 0, 0.15);;
+    --foods-visitors-bg-color: rgba(0, 0, 0, 0.15);
+
+    //NOT_FOUND
+    --not-found-bg-color: rgba(19, 19, 19, 1);
+    --not-found-text-color: #fff;
+    --not-found-layer-bg-color: rgba(22 ,17, 17, 83%);
 
     --home-about-section-bg: rgba(16, 16, 16, 1);
     --home-about-title-color: rgba(255, 244, 223, 1);

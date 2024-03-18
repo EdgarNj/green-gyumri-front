@@ -1,4 +1,4 @@
-import {createAsyncThunk} from "@reduxjs/toolkit";
+import {createAction, createAsyncThunk} from "@reduxjs/toolkit";
 import Api from "../../../Api";
 
 export const getFoodsDataRequest = createAsyncThunk("foods/get-foods-data-request", async (payload,thunkAPI) => {
@@ -10,4 +10,6 @@ export const getFoodsDataRequest = createAsyncThunk("foods/get-foods-data-reques
     } catch (e) {
         return thunkAPI.rejectWithValue(e.response.data)
     }
-})
+});
+
+export const clearFoodsData = createAction('workers/clear-foods-data');

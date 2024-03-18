@@ -25,5 +25,7 @@
   "Expiration (MM/YY):": "Expiration (MM/YY):",
   "CVV": "CVV",
   "Cardholder Name": "Cardholder Name",
-  "Email": "Email"
+  "Email": "Email",
+
+  "Page not found": "Page not found"
 }

@@ -13,6 +13,7 @@ import book from "./book/book"
 
 import foods from "./foods/foods";
 import compositions from "./foods/compositions";
+import notFound from "./notFound";
 
 const reducers = {
     customization,
@@ -28,7 +29,8 @@ const reducers = {
     foods,
     compositions,
     lastBlock,
-    book
+    book,
+    notFound
 }
 
 export default reducers

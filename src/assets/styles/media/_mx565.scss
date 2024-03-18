@@ -1,5 +1,4 @@
 // SERVICES
-
 #services {
 
   .servicesCard {
@@ -30,6 +29,10 @@
 
     .title {
       font-size: 30px;
+    }
+
+    .foodCard{
+      height: 330px;
     }
 
     .slider-container .slider-frame .slide {
@@ -63,8 +66,25 @@
 }
 
 
-//FOOTER
+//NOT_FOUND
+#not_found{
+  .text_block{
 
+    .title{
+      font-size: 100px;
+      line-height: 65px;
+    }
+
+    .text{
+      font-size: 28px;
+      line-height: 80px;
+    }
+
+  }
+}
+
+
+//FOOTER
 #footer {
 
   .content {
