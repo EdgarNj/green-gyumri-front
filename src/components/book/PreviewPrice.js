@@ -1,11 +1,13 @@
-import React, {useRef, useState} from 'react';
+import React, {useCallback, useRef, useState} from 'react';
 import {ReactComponent as OpenBtn} from "../../assets/icons/book/openBtn.svg";
-import UsdIcon from "../../assets/icons/book/dram.svg";
-import AmdIcon from "../../assets/icons/book/usd.svg";
+import AmdIcon from "../../assets/icons/book/dram.svg";
+import UsdIcon from "../../assets/icons/book/usd.svg";
 import RubIcon from "../../assets/icons/book/rub.svg";
 import {CSSTransition} from 'react-transition-group';
 import PropTypes from "prop-types";
 import OutsideClickHandler from "react-outside-click-handler";
+import {setCurrency} from "../../store/actions/book/book";
+import {useDispatch, useSelector} from "react-redux";
 
 const options = [
     {
@@ -27,19 +29,27 @@ const options = [
 
 function PreviewPrice(props) {
     const {values} = props;
+    const dispatch = useDispatch()
     const nodeRef = useRef(null)
     const [open, setOpen] = useState(false);
-    const [selectedCurrency, setSelectedCurrency] = useState(0);
+    const actualCurrency = useSelector(state => state.book.currency)
+
+
+    const handleChangeCurrency = useCallback((cur) => {
+        dispatch(setCurrency({currency: cur}))
+    }, [])
+
 
     return (
-        <div ref={nodeRef} className="currency__dropdown">
-            <OutsideClickHandler onOutsideClick={() => setOpen(false)}>
+        <OutsideClickHandler onOutsideClick={() => setOpen(false)}>
+            <div ref={nodeRef} className="currency__dropdown">
+
                 <div onClick={() => {
                     setOpen(!open)
                 }} className="dropdown__closed">
-                    <img src={options[selectedCurrency].icon} alt=""/>
-                    <p>{values[options[selectedCurrency].currency]}</p>
-                    <OpenBtn className="open__btn" />
+                    <img src={options.find(data => data.currency === actualCurrency).icon} alt=""/>
+                    <p>{values[actualCurrency]}</p>
+                    <OpenBtn className="open__btn"/>
                 </div>
 
                 <CSSTransition
@@ -53,14 +63,14 @@ function PreviewPrice(props) {
                 >
                     <div className="hidden__elem_box">
 
-                        {options.map((data, index) => {
-                            if (index === selectedCurrency) return null;
+                        {options.map((data) => {
+                            if (data.currency === actualCurrency) return null;
                             return (
                                 <div
                                     className="hidden__elem"
                                     key={data.id}
                                     onClick={() => {
-                                        setSelectedCurrency(index);
+                                        handleChangeCurrency(data.currency);
                                         setOpen(false);
                                     }}
                                 >
@@ -71,8 +81,9 @@ function PreviewPrice(props) {
                         })}
                     </div>
                 </CSSTransition>
-            </OutsideClickHandler>
-        </div>
+
+            </div>
+        </OutsideClickHandler>
     );
 }
 

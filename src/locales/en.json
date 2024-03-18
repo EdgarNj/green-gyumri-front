@@ -10,7 +10,20 @@
   "We provide:": "We provide:",
   "Join us to celebrate": "Join us to celebrate",
   "Our news": "Our news",
+  "Booking": "Booking",
+  "Full Payment": "Full Payment",
+  "Partial payment": "Partial payment",
+  "Pay with": "Pay with",
+  "Invalid card number": "Invalid card number",
+  "Required": "Required",
+  "Invalid email address": "Invalid email address",
+  "Invalid CVV": "Invalid CVV",
+  "Invalid expiration date (MM/YY)": "Invalid expiration date",
+  "Pay now": "Pay now",
 
-
-  "Booking" : "Booking"
+  "Card Number": "Card Number",
+  "Expiration (MM/YY):": "Expiration (MM/YY):",
+  "CVV": "CVV",
+  "Cardholder Name": "Cardholder Name",
+  "Email": "Email"
 }

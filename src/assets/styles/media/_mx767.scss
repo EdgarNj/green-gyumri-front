@@ -99,3 +99,41 @@ h1 {
 
   }
 }
+
+
+// book start -------------
+.book__section {
+
+  .write__info_box {
+    flex-direction: column;
+    align-items: center;
+
+
+    .arrival__visitors__box {
+      width: 100%;
+      z-index: 120;
+    }
+  }
+
+
+  .partial__pay_box {
+    flex-wrap: wrap;
+    align-items: center;
+    height: 200px;
+    justify-content: center;
+
+    .partial__pay_button {
+      width: 50%;
+    }
+
+    .partial__pay_range {
+      width: 50%;
+    }
+
+    .currency__dropdown {
+      margin-top: 20px;
+    }
+  }
+}
+
+// book end ---------------

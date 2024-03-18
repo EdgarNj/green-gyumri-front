@@ -1,15 +1,10 @@
 .book__section {
   width: 100%;
-  height: 120vh;
   position: relative;
+  display: flex;
+  padding: 40px;
+  justify-content: space-between;
 
-  .container {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px;
-    height: 100%;
-
-  }
 
   &:after {
     content: "";
@@ -56,6 +51,7 @@
 
   .forms__container {
     display: flex;
+    flex-direction: column;
     width: 50%;
     height: 100%;
     z-index: 3;
@@ -65,3 +61,4 @@
 
   }
 }
+

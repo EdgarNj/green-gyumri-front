@@ -8,46 +8,29 @@ import moment from 'moment';
 import PropTypes from "prop-types";
 
 function Calendar(props) {
-    const {changeData} = props
+    const {changeData, date} = props
     const lang = useSelector(state => state.customization.lang);
     const {monthLabels, weekdayLabels, monthShortLabels} = getLanguageData(lang);
+    const transactions = useSelector(state => state.book.reservedDays)
+    const [activeDate, setActiveDate] = useState(date);
 
-    const [activeDate, setActiveDate] = useState(null); // State to keep track of active date
-
-    const transactions = [
-        {
-            id: 1,
-            date: '2024-03-07T22:42:01.909Z'
-        },
-        {
-            id: 2,
-            date: '2024-03-07T22:42:01.909Z'
-        },
-        {
-            id: 3,
-            date: '2024-03-07T22:42:01.909Z'
-        }
-    ]; // Assuming this is your transactions data
-
-    // Function to check if a date is disabled
     const isDateDisabled = date => {
         const formattedDate = moment(date).format('YYYY-MM-DD');
-        return transactions.some(transaction => moment(transaction.date).format('YYYY-MM-DD') === formattedDate);
+        return moment(date).isBefore(moment(), 'day') || transactions.some(transaction => moment(transaction.date).format('YYYY-MM-DD') === formattedDate);
     };
 
-    // Function to handle click on day
     const handleClickDay = day => {
         setActiveDate(day);
         changeData(day)
     };
 
-    // Function to add class to the tile based on date
+
     const tileClassName = ({date}) => {
         if (isDateDisabled(date)) {
-            return 'disabled'; // Set custom class for disabled dates
+            return 'disabled';
         }
         if (moment(date).isSame(activeDate, 'day')) {
-            return 'active'; // Set custom class for active date
+            return 'active';
         }
         return null;
     };
@@ -57,13 +40,14 @@ function Calendar(props) {
             next2Label={null}
             onClickDay={handleClickDay}
             prev2Label={null}
+
             prevLabel={<ChevronLeft/>}
             nextLabel={<ChevronRight/>}
             formatMonthYear={(locale, date) => monthLabels[date.getMonth()]}
             formatShortWeekday={(locale, date) => weekdayLabels[date.getDay()]}
             formatMonth={(locale, date) => monthShortLabels[date.getMonth()]}
             showNeighboringMonth={false}
-            tileDisabled={({date}) => isDateDisabled(date)} // Disable specific days
+            tileDisabled={({date}) => isDateDisabled(date)}
             tileClassName={tileClassName}
         />
     );
@@ -72,5 +56,6 @@ function Calendar(props) {
 export default Calendar;
 
 Calendar.propTypes = {
+    date: PropTypes.object.isRequired,
     changeData: PropTypes.func.isRequired
 }

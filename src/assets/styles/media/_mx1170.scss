@@ -64,7 +64,7 @@
 
 #footer {
 
-  .navbar{
+  .navbar {
     width: 100%;
   }
 
@@ -79,3 +79,25 @@
   }
 }
 
+
+// book page start ----------------
+.book__section {
+  flex-direction: column;
+  align-items: center;
+
+  & > .title__box {
+  width: 100%;
+    align-items: center;
+    justify-content: center;
+    h2{
+      text-align: center;
+    }
+  }
+
+  .forms__container {
+    width: 90%;
+  }
+}
+
+
+// book page end ------------------

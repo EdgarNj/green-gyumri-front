@@ -16,6 +16,21 @@
 
 
 
-  "Booking": "Ամրագրում"
+  "Booking": "Ամրագրում",
+  "Full Payment": "Լրիվ վճարում",
+  "Partial payment" :"Մասնակի վճարում",
+  "Pay with" :"Վճարիր",
 
+  "Invalid card number": "Անվավեր քարտի համար",
+  "Required": "Պահանջվում է",
+  "Invalid email address": "Անվավեր էլ․ հասցե",
+  "Invalid CVV": "Անվավեր CVV",
+  "Invalid expiration date (MM/YY)": "Անվավեր ժամկետ",
+  "Pay now": "Վճարիր հիմա",
+
+  "Card Number": "Քարտի համար",
+  "Expiration (MM/YY):": "Ժամկետը (MM/YY):",
+  "CVV": "CVV",
+  "Cardholder Name": "Քարտատիրոջ անունը",
+  "Email": "էլեկտրոնային հասցե"
 }

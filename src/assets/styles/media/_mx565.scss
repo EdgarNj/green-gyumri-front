@@ -38,7 +38,7 @@
     flex-direction: column;
     align-items: start;
 
-    li{
+    li {
       margin: 5px 0;
     }
   }
@@ -53,22 +53,22 @@
       &:first-child {
         align-items: start;
 
-        .nav_list:last-child{
+        .nav_list:last-child {
           font-size: 25px;
         }
       }
 
-      &:nth-child(2){
+      &:nth-child(2) {
         width: 100%;
         justify-content: space-between;
         margin-top: 25px;
 
-          .nav_list{
+        .nav_list {
           margin: 0;
         }
       }
 
-      img{
+      img {
         width: 31px;
       }
     }
@@ -90,3 +90,100 @@ h1 {
   }
 
 }
+
+//book start
+
+// book start -------------
+.book__section {
+  padding: 20px;
+
+  & > .title__box {
+    margin: 25px 0;
+
+    h2 {
+      font-size: 55px;
+    }
+  }
+
+
+  .forms__container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .write__info_box {
+    flex-direction: column;
+    align-items: center;
+
+
+    .arrival__visitors__box {
+      width: 100%;
+      z-index: 120;
+    }
+
+    .currency__dropdown {
+      margin-top: 10px;
+    }
+  }
+
+
+  .partial__pay_box {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    justify-content: center;
+
+    .partial__pay_button {
+      width: 100%;
+
+    }
+
+    .partial__pay_range {
+      width: 100%;
+      margin-top: 25px;
+    }
+
+    .currency__dropdown {
+      margin-top: 25px;
+      z-index: 999;
+    }
+  }
+
+  .pay__with_box {
+    margin: 15px 0 ;
+    .title__box {
+      p {
+        font-size: 35px;
+      }
+    }
+  }
+
+  .card__form_box {
+    justify-content: center;
+
+    .form__input_box {
+      margin-bottom: 5px;
+    }
+
+    .expiration__input {
+      width: 100%;
+    }
+
+    .cvv__input {
+      width: 100%;
+    }
+
+    .send__button {
+
+      padding: 15px 40px 15px 40px;
+    }
+  }
+
+}
+
+// book end ---------------
+//book end
+
+
+

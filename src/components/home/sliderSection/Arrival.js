@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {CSSTransition} from 'react-transition-group';
 import OutsideClickHandler from 'react-outside-click-handler';
 import {ReactComponent as CalendarIcon} from '../../../assets/icons/homeSlider/calendar.svg';
@@ -6,15 +6,24 @@ import {ReactComponent as OpenIcon} from '../../../assets/icons/homeSlider/polyg
 import Calendar from "./Calendar";
 import moment from "moment";
 import {useTranslation} from "react-i18next";
+import {useDispatch, useSelector} from "react-redux";
+import {setBookDay} from "../../../store/actions/book/book";
 
 function Arrival() {
     const openRef = useRef(null);
+    const bookData = useSelector(state => state.book.bookDate)
     const [open, setOpen] = useState(false);
-    const [date, setData] = useState(null)
+    const dispatch = useDispatch()
+    const [date, setData] = useState(bookData ? moment(bookData) : null)
     const {t} = useTranslation()
     const handleOutsideClick = () => {
         setOpen(false);
     };
+    useEffect(() => {
+        if (date) {
+            dispatch(setBookDay({date: date.toISOString()}))
+        }
+    }, [date])
 
     return (
 
@@ -33,7 +42,7 @@ function Arrival() {
                     <>
                         <div className="line"></div>
                         <div className="opened__bar">
-                            <Calendar changeData={setData}/>
+                            <Calendar date={date} changeData={setData}/>
                         </div>
                     </>
                 </CSSTransition>

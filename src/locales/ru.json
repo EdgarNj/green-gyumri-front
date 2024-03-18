@@ -16,5 +16,21 @@
   "Join us to celebrate": "Присоединяйтесь к нам, чтобы отпраздновать",
   "Our news": "Наши новости",
 
-  "Booking": "Бронирование"
+  "Booking": "Бронирование",
+  "Full Payment": "Полная оплата",
+  "Partial payment" :"Частичная оплата",
+  "Pay with" :"Оплатить с помощью",
+
+  "Invalid card number": "Неверный номер карты",
+  "Required": "Необходимый",
+  "Invalid email address": "Неверный адрес электронной почты",
+  "Invalid CVV": "Неверный CVV",
+  "Invalid expiration date (MM/YY)": "Неверная дата истечения срока действия",
+  "Pay now": "Оплатить сейчас",
+  "Card Number": "Номер карты",
+  "Expiration (MM/YY):": "Срок действия (ММ/ГГ):",
+  "CVV": "CVV",
+  "Cardholder Name": "Имя владельца карты",
+  "Email": "Электронная почта"
+
 }

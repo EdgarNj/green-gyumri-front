@@ -1,30 +1,29 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useRef, useState} from 'react';
 import {ReactComponent as SliderIcon} from "../../../assets/icons/homeSlider/visitors.svg";
 import {ReactComponent as OpenIcon} from "../../../assets/icons/homeSlider/polygon.svg";
 import {CSSTransition} from 'react-transition-group';
 import OutsideClickHandler from "react-outside-click-handler";
-import PropTypes from "prop-types";
 import {useTranslation} from "react-i18next";
+import {useDispatch, useSelector} from "react-redux";
+import {setVisitorsCount} from "../../../store/actions/book/book";
 
-function Visitors(props) {
-    const {changeVisitors} = props
-    const [visitorCount, setVisitorCount] = useState(0)
+function Visitors() {
+    const dispatch = useDispatch()
+    const visitorsCount = useSelector(state => state.book.visitorsCount)
+
     const [open, setOpen] = useState(false)
     const barRef = useRef(null)
     const {t} = useTranslation()
 
     const handleChangeVisitor = useCallback((variant) => {
 
-        if (variant === "plus" && visitorCount < 50) {
-            setVisitorCount((state) => state + 1)
-        } else if (variant === "minus" && visitorCount > 0) {
-            setVisitorCount((state) => state - 1)
-        }
-    }, [visitorCount])
+        if (variant === "plus" && visitorsCount < 50) {
+            dispatch(setVisitorsCount({count: visitorsCount + 1}))
 
-    useEffect(() => {
-        changeVisitors(visitorCount)
-    }, [visitorCount]);
+        } else if (variant === "minus" && visitorsCount > 0) {
+            dispatch(setVisitorsCount({count: visitorsCount - 1}))
+        }
+    }, [visitorsCount])
 
 
     const handleOpen = useCallback(() => {
@@ -43,7 +42,7 @@ function Visitors(props) {
                     <div className="title__part">
                         <SliderIcon/>
                         <p>
-                            {`${t("Number of visitors")} ${visitorCount && !open ? visitorCount : ""}`}
+                            {`${t("Number of visitors")} ${visitorsCount && !open ? visitorsCount : ""}`}
                         </p>
                     </div>
                     <button onClick={() => {
@@ -63,7 +62,7 @@ function Visitors(props) {
                                 }}>-
                                 </button>
                                 <div className="previous__visotor">
-                                    <p>{visitorCount}</p>
+                                    <p>{visitorsCount}</p>
                                 </div>
                                 <button className="change__visitor_btn" onClick={() => {
                                     handleChangeVisitor("plus")
@@ -81,7 +80,3 @@ function Visitors(props) {
 }
 
 export default Visitors;
-
-Visitors.propTypes = {
-    changeVisitors: PropTypes.func.isRequired
-}

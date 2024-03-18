@@ -108,6 +108,23 @@ $font-varEn2: Script MT Bold, sans-serif;
 
   --book-previus-box-shodow: 0px 4px 30px 0px rgba(164, 164, 164, 0.25);
   --book-previus-icon-invert: 0;
+
+
+  --book-input-border-color: rgba(231, 231, 231, 1);
+  --book-active-border-color: rgba(170, 132, 83, 1);
+  --book-error-border-color: rgba(255, 89, 89, 1);
+
+  --book-input-bg: rgba(255, 255, 255, 1);
+
+
+  --book-input-error-bg: rgba(255, 239, 239, 1);
+  --book-input-error-text-color: rgba(255, 89, 89, 1);
+  --book-input-placeHolder-color: rgba(105, 105, 105, 1);
+  --book-input-color: rgba(22, 22, 22, 1);
+  --book-payMethod-color:rgba(165, 125, 74, 1);
+  --book-partial-box-bg:rgba(255, 244, 223, 1);
+  --book-send-btn-bg:rgba(170, 132, 83, 1);
+  --book-send-btn-color:rgba(255, 255, 255, 1);
   //SERVICES
 
   --services-bg-color: rgba(255, 244, 223, 1);
@@ -194,11 +211,28 @@ $font-varEn2: Script MT Bold, sans-serif;
     --book-arrival-closed-item-color: rgba(219, 219, 219, 1);
     --book-arrival-open-button-color: rgba(219, 219, 219, 1);
     --book-arrival-boxShdow: 0px 4px 30px 0px rgba(164, 164, 164, 0);
+    --book-partial-box-bg:rgba(170, 132, 83, 1);
+    --book-send-btn-bg:rgba(170, 132, 83, 1);
+    --book-send-btn-color:rgba(255, 244, 223, 1);
 
 
     --book-previus-select-item-color: rgba(219, 219, 219, 1);
     --book-previus-closed-bg: rgba(33, 33, 33, 1);
     --book-previus-box-shodow: 0px 4px 30px 0px rgba(164, 164, 164, 0);
+
+
+    --book-input-border-color: rgba(49, 49, 49, 1);
+    --book-active-border-color: rgba(49, 49, 49, 1);
+    --book-error-border-color: rgba(255, 89, 89, 0.3);
+
+    --book-input-bg: rgba(33, 33, 33, 1);
+
+
+    --book-input-error-bg: rgb(31, 28, 28);
+    --book-input-error-text-color: rgba(255, 89, 89, 1);
+    --book-input-placeHolder-color: rgba(219, 219, 219, 1);
+    --book-input-color: rgba(219, 219, 219, 1);
+    --book-payMethod-color:rgba(188, 149, 102, 1);
 
     --book-previus-icon-invert: 1;
     //SERVICES

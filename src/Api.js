@@ -2,8 +2,8 @@ import axios from "axios";
 
 
 const api = axios.create({
-    // baseURL: "http://192.168.100.11:4000",
-    baseURL: "http://localhost:4000",
+    baseURL: "http://192.168.10.146:4000",
+    // baseURL: "http://localhost:4000",
 })
 
 api.interceptors.request.use(
@@ -45,6 +45,19 @@ class Api {
 
     static getReservedDaysData() {
         return api.get(`book/list`)
+    }
+
+    static getPricingData() {
+        return api.get(`prices`)
+    }
+
+    static createReservation(values) {
+        console.log(values)
+        return api.post(`book/process-payment`, values, {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        })
     }
 
     //BOOK END

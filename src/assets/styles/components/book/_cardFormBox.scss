@@ -1,0 +1,26 @@
+.card__form_box {
+  display: flex;
+  flex-wrap: wrap;
+
+  .expiration__input {
+    width: 70%;
+  }
+
+  .cvv__input {
+    width: 30%;
+  }
+
+  .send__button {
+    margin-top: 15px;
+    font-family: Roboto;
+    font-size: 25px;
+    font-weight: 400;
+    background-color: var(--book-send-btn-bg);
+    text-align: left;
+    padding: 15px 89px 15px 89px;
+    border-radius: 10px;
+    color: var(--book-send-btn-color);
+  }
+
+
+}
