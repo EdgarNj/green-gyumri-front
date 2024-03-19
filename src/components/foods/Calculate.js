@@ -3,11 +3,11 @@ import Visitors from "../home/sliderSection/Visitors";
 import PropTypes from "prop-types";
 
 function Calculate(props) {
-    const {value, changeVisitors, change} = props;
+    const {value,  change} = props;
 
     return (
         <div className='calculateBlock'>
-            <Visitors changeVisitors={changeVisitors}/>
+            <Visitors />
             <label className='range_block'>
                 <input
                     value={value}
@@ -29,6 +29,5 @@ export default Calculate;
 
 Calculate.propTypes = {
     value: PropTypes.number.isRequired,
-    changeVisitors: PropTypes.func.isRequired,
     change: PropTypes.func.isRequired,
 };

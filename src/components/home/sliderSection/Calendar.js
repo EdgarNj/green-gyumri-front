@@ -56,6 +56,9 @@ function Calendar(props) {
 export default Calendar;
 
 Calendar.propTypes = {
-    date: PropTypes.object.isRequired,
+    date: PropTypes.object,
     changeData: PropTypes.func.isRequired
+}
+Calendar.defaultProps = {
+    date: {}
 }

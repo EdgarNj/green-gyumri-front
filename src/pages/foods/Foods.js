@@ -21,11 +21,10 @@ function Foods() {
     const {t} = useTranslation();
     const {foods, totalPages} = useSelector(state => state.foods);
     const {compositions} = useSelector(state => state.compositions);
-
+    const visitorsNumber = useSelector(state => state.book.visitorsCount)
     const [title, setTitle] = useState('');
     const [slideIndex, setSlideIndex] = useState(1);
     const [value, setValue] = useState(0);
-    const [visitorsNumber, setVisitorsNumber] = useState(0);
     const [show, setShow] = useState(false);
     const [page, setPage] = useState(1);
     const [slidesToShow, setSlidesToShow] = useState(2.7);
@@ -108,7 +107,6 @@ function Foods() {
                                     show &&
                                     <Calculate
                                         value={+value}
-                                        changeVisitors={setVisitorsNumber}
                                         change={setValue}
                                     />
                                 }

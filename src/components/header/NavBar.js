@@ -20,7 +20,7 @@ function NavBar() {
                     <NavLink to="/services">{t("Services")}</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/">{t("Gyumri")}</NavLink>
+                    <NavLink to="/gyumri">{t("Gyumri")}</NavLink>
                 </li>
             </ul>
         </nav>
