@@ -110,8 +110,6 @@ $font-varEn2: Script MT Bold, sans-serif;
   --book-previus-icon-invert: 0;
 
 
-
-
   --book-input-border-color: rgba(231, 231, 231, 1);
   --book-active-border-color: rgba(170, 132, 83, 1);
   --book-error-border-color: rgba(255, 89, 89, 1);
@@ -123,10 +121,35 @@ $font-varEn2: Script MT Bold, sans-serif;
   --book-input-error-text-color: rgba(255, 89, 89, 1);
   --book-input-placeHolder-color: rgba(105, 105, 105, 1);
   --book-input-color: rgba(22, 22, 22, 1);
-  --book-payMethod-color:rgba(165, 125, 74, 1);
-  --book-partial-box-bg:rgba(255, 244, 223, 1);
-  --book-send-btn-bg:rgba(170, 132, 83, 1);
-  --book-send-btn-color:rgba(255, 255, 255, 1);
+  --book-payMethod-color: rgba(165, 125, 74, 1);
+  --book-partial-box-bg: rgba(255, 244, 223, 1);
+  --book-send-btn-bg: rgba(170, 132, 83, 1);
+  --book-send-btn-color: rgba(255, 255, 255, 1);
+
+  --book-confirm-bg: rgba(255, 244, 223, 1);
+  --book-confirm-list-bg: rgba(255, 255, 255, 0.98);
+  --book-confirm-items-color: rgba(60, 33, 0, 1);
+  --book-confirm-price-color: rgba(22, 22, 22, 1);
+  --book-confirm-price-text-color: rgba(142, 109, 69, 1);
+  --book-confirm-send-btn-color: rgba(255, 255, 255, 1);
+  --book-confirm-send-btn-bg: rgba(170, 132, 83, 1);
+
+  --places-section-bg: rgba(255, 244, 223, 1);
+  --places-item-color: rgba(87, 63, 33, 1);
+
+
+  --places-pagination-color: rgba(22, 22, 22, 1);
+  --places-pagination-active-color: rgba(255, 246, 216, 1);
+  --places-pagination-active-bg: rgba(34, 22, 7, 1);
+
+  --places-single-bg: rgba(255, 244, 223, 1);
+  --places-single-back-btn-color: rgba(142, 109, 69, 1);
+  --places-single-item-title-color: rgba(255, 255, 255, 1);
+  --places-single-item-text-bg: rgba(34, 22, 7, 1);
+  --places-single-item-desc-color: rgba(255, 255, 255, 1);
+  --places-single-item-map-invert: 0;
+
+
   //SERVICES
   --services-bg-color: rgba(255, 244, 223, 1);
   --services-arrow-color: rgba(255, 244, 223, 1);
@@ -156,7 +179,7 @@ $font-varEn2: Script MT Bold, sans-serif;
 
 
   //NOT_FOUND
-  --not-found-bg-color:rgba(255, 244, 223, 1);
+  --not-found-bg-color: rgba(255, 244, 223, 1);
   --not-found-text-color: black;
   --not-found-layer-bg-color: #a6a6a6a6;
 
@@ -222,9 +245,9 @@ $font-varEn2: Script MT Bold, sans-serif;
     --book-arrival-closed-item-color: rgba(219, 219, 219, 1);
     --book-arrival-open-button-color: rgba(219, 219, 219, 1);
     --book-arrival-boxShdow: 0px 4px 30px 0px rgba(164, 164, 164, 0);
-    --book-partial-box-bg:rgba(170, 132, 83, 1);
-    --book-send-btn-bg:rgba(170, 132, 83, 1);
-    --book-send-btn-color:rgba(255, 244, 223, 1);
+    --book-partial-box-bg: rgba(170, 132, 83, 1);
+    --book-send-btn-bg: rgba(170, 132, 83, 1);
+    --book-send-btn-color: rgba(255, 244, 223, 1);
 
 
     --book-previus-select-item-color: rgba(219, 219, 219, 1);
@@ -243,9 +266,36 @@ $font-varEn2: Script MT Bold, sans-serif;
     --book-input-error-text-color: rgba(255, 89, 89, 1);
     --book-input-placeHolder-color: rgba(219, 219, 219, 1);
     --book-input-color: rgba(219, 219, 219, 1);
-    --book-payMethod-color:rgba(188, 149, 102, 1);
-
+    --book-payMethod-color: rgba(188, 149, 102, 1);
     --book-previus-icon-invert: 1;
+
+
+    --book-confirm-bg: rgb(28, 27, 27);
+    --book-confirm-list-bg: rgba(19, 19, 19, 0.72);
+    --book-confirm-items-color: rgba(219, 219, 219, 1);
+    --book-confirm-price-color: rgba(219, 219, 219, 1);
+    --book-confirm-price-text-color: rgb(199, 160, 111);
+    --book-confirm-send-btn-color: rgba(255, 255, 255, 1);
+    --book-confirm-send-btn-bg: rgb(73, 54, 29);
+    --book-confirm-icon-invert: 100;
+
+
+    --places-section-bg: rgba(19, 19, 19, 1);
+    --places-item-color: rgba(255, 244, 223, 1);
+
+    --places-pagination-color: rgba(255, 244, 223, 1);
+    --places-pagination-active-color: rgba(34, 22, 7, 1);
+    --places-pagination-active-bg: rgba(255, 244, 223, 1);
+
+
+
+    --places-single-bg: rgba(19, 19, 19, 1);
+    --places-single-back-btn-color: rgba(255, 244, 223, 1);
+    --places-single-item-title-color: rgba(219, 219, 219, 1);
+    --places-single-item-text-bg: rgba(0, 0, 0, 0.2);
+    --places-single-item-desc-color: rgba(219, 219, 219, 1);
+    --places-single-item-map-invert: 90;
+
     //SERVICES
     --services-bg-color: rgba(19, 19, 19, 1);
     --services-arrow-color: rgba(255, 244, 223, 1);
@@ -272,7 +322,7 @@ $font-varEn2: Script MT Bold, sans-serif;
     //NOT_FOUND
     --not-found-bg-color: rgba(19, 19, 19, 1);
     --not-found-text-color: #fff;
-    --not-found-layer-bg-color: rgba(22 ,17, 17, 83%);
+    --not-found-layer-bg-color: rgba(22, 17, 17, 83%);
 
     --home-about-section-bg: rgba(16, 16, 16, 1);
     --home-about-title-color: rgba(255, 244, 223, 1);

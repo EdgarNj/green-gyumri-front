@@ -1,0 +1,47 @@
+
+.places__card {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s;
+  margin-bottom: 15px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    flex-direction: column;
+
+  }
+
+  &_img {
+    border-radius: 20px;
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    transition: all 0.4s;
+  }
+
+  &_title {
+    margin-top: 10px;
+
+    h2 {
+      font-family: Roboto, sans-serif;
+      font-size: 30px;
+      font-weight: 400;
+      letter-spacing: 0.085em;
+      color: var(--places-item-color);
+      text-align: left;
+    }
+
+  }
+}
+

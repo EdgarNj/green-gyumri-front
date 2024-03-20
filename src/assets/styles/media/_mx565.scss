@@ -31,7 +31,7 @@
       font-size: 30px;
     }
 
-    .foodCard{
+    .foodCard {
       height: 330px;
     }
 
@@ -67,15 +67,15 @@
 
 
 //NOT_FOUND
-#not_found{
-  .text_block{
+#not_found {
+  .text_block {
 
-    .title{
+    .title {
       font-size: 100px;
       line-height: 65px;
     }
 
-    .text{
+    .text {
       font-size: 28px;
       line-height: 80px;
     }
@@ -208,7 +208,8 @@ h1 {
   }
 
   .pay__with_box {
-    margin: 15px 0 ;
+    margin: 15px 0;
+
     .title__box {
       p {
         font-size: 35px;
@@ -240,7 +241,32 @@ h1 {
 }
 
 // book end ---------------
-//book end
+//book confirm start
+.book__confirm_section {
+  .confirm__info_container {
+    width: 95%;
+  }
+}
 
 
+//book confirm end
+
+.places__page {
+  .title__box {
+    h1 {
+      font-size: 45px;
+    }
+  }
+
+  .items__box {
+    .places__card {
+      width: calc(100%);
+      height: 500px;
+      margin-bottom: 40px;
+    }
+
+  }
+
+
+}
 

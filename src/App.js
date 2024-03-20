@@ -6,6 +6,9 @@ import Workers from "./pages/services/Workers";
 import Foods from "./pages/foods/Foods";
 import Booking from "./pages/book/Booking";
 import NotFound from "./pages/NotFound";
+import BookConfirm from "./pages/book/BookConfirm";
+import Places from "./pages/places/Places";
+import SinglePlace from "./pages/places/SinglePlace";
 
 function App() {
     return (
@@ -13,13 +16,13 @@ function App() {
             <Routes>
                 <Route element={<Home/>} path="/"/>
                 <Route element={<Booking/>} path="/book"/>
+                <Route element={<BookConfirm/>} path="/book/confirm"/>
                 <Route element={<Services/>} path="/services"/>
                 <Route element={<Workers/>} path="/services/workers/:id"/>
                 <Route element={<Foods/>} path="/foods"/>
-
-
-
-                <Route path="*" element={<NotFound/>} />
+                <Route element={<Places/>} path="/places"/>
+                <Route element={<SinglePlace/>} path="/places/:id"/>
+                <Route path="*" element={<NotFound/>}/>
             </Routes>
         </BrowserRouter>
     );

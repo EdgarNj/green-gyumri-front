@@ -6,33 +6,29 @@
   "Gyumri": "Գյումրի",
   "Arrival": "Ժամանում",
   "Number of visitors": "Այցելուների քանակը",
-
   "About us": "Մեր մասին",
-
   "We provide:": "Մենք տրամադրում ենք",
-
   "Join us to celebrate": "Միացե՛ք մեզ տոնելու",
   "Our news": "Մեր նորությունները",
-
-
-
   "Booking": "Ամրագրում",
   "Full Payment": "Լրիվ վճարում",
-  "Partial payment" :"Մասնակի վճարում",
-  "Pay with" :"Վճարիր",
-
+  "Partial payment": "Մասնակի վճարում",
+  "Pay with": "Վճարիր",
   "Invalid card number": "Անվավեր քարտի համար",
   "Required": "Պահանջվում է",
   "Invalid email address": "Անվավեր էլ․ հասցե",
   "Invalid CVV": "Անվավեր CVV",
   "Invalid expiration date (MM/YY)": "Անվավեր ժամկետ",
   "Pay now": "Վճարիր հիմա",
-
   "Card Number": "Քարտի համար",
   "Expiration (MM/YY):": "Ժամկետը (MM/YY):",
   "CVV": "CVV",
   "Cardholder Name": "Քարտատիրոջ անունը",
   "Email": "էլեկտրոնային հասցե",
+  "Confirm and Pay": "Հաստատել և վճարել",
+  "E-mail": "Էլ-հասցե",
+  "Page not found": "Էջը չի գտնվել",
 
-  "Page not found": "Էջը չի գտնվել"
+  "Must visit places in Gyumri": "Պետք է այցելել Գյումրիի վայրեր"
+
 }

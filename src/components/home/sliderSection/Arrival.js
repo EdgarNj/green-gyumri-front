@@ -21,7 +21,6 @@ function Arrival() {
     };
     useEffect(() => {
         if (date) {
-            console.log(date.toISOString(),"poxverl")
             dispatch(setBookDay({date: date.toISOString()}))
         }
     }, [date])

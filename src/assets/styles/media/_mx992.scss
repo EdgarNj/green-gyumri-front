@@ -8,8 +8,8 @@
   .serviceMain {
     margin-top: 70px;
 
-    .slide{
-      display: flex ;
+    .slide {
+      display: flex;
       justify-content: center;
     }
   }
@@ -18,20 +18,20 @@
     width: calc(100% / 2 - 25px);
   }
 
-  .arrow{
+  .arrow {
     font-size: 60px !important;
   }
 }
 
 
 //FOODS
-#food{
+#food {
   padding: 30px 20px;
 
-  .foodContent{
+  .foodContent {
     margin: 30px 0 0;
 
-    .foodCard{
+    .foodCard {
       height: 280px;
     }
   }
@@ -39,11 +39,11 @@
 
 
 //NOT_FOUND
-#not_found{
+#not_found {
   min-height: calc(500px);
   height: calc(100vh - 150px);
 
-  .layer{
+  .layer {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -52,7 +52,7 @@
     background: var(--not-found-layer-bg-color);
   }
 
-  .bg{
+  .bg {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -63,22 +63,41 @@
 
 
 // FOOTER
-#footer{
-  .navbar{
+#footer {
+  .navbar {
     margin: 40px 0;
 
-    ul{
+    ul {
       flex-direction: column;
       align-items: center;
 
-      li{
+      li {
         margin: 5px 0;
       }
     }
   }
 
-  .nav .nav_block:nth-child(1){
+  .nav .nav_block:nth-child(1) {
     width: 100%;
     justify-content: space-evenly;
   }
+}
+
+
+.book__confirm_section {
+  .confirm__info_container {
+    width: 95%;
+  }
+}
+
+
+.places__page {
+  .items__box {
+    .places__card {
+      width: calc(100% / 2 - 35px);
+      height: 450px;
+    }
+  }
+
+
 }

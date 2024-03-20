@@ -58,42 +58,41 @@
 
 
 //NOT_FOUND
-#not_found{
+#not_found {
 
-  .images{
+  .images {
 
-    &:first-child{
+    &:first-child {
       width: 170px;
       height: 220px;
     }
 
-    &:nth-child(2){
+    &:nth-child(2) {
       width: 260px;
       height: 150px;
     }
 
-    &:nth-child(3){
+    &:nth-child(3) {
       width: 230px;
       height: 160px;
     }
 
-    &:nth-child(4){
+    &:nth-child(4) {
       width: 160px;
       height: 190px;
     }
 
-    &:nth-child(5){
+    &:nth-child(5) {
       width: 250px;
       height: 150px;
     }
 
-    &:nth-child(6){
+    &:nth-child(6) {
       width: 200px;
       height: 150px;
     }
   }
 }
-
 
 
 //FOOTER
@@ -122,10 +121,11 @@
   align-items: center;
 
   & > .title__box {
-  width: 100%;
+    width: 100%;
     align-items: center;
     justify-content: center;
-    h2{
+
+    h2 {
       text-align: center;
     }
   }
@@ -135,5 +135,26 @@
   }
 }
 
+// book confirm  start ---------------------
+.book__confirm_section {
+  .reserving__data {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .confirm__preview_date, .preview__confirm_visitors, {
+    margin-bottom: 15px;
+  }
+}
+
+// book confirm  end -----------------------
+
 
 // book page end ------------------
+
+
+.places__page {
+  .places__card {
+    height: 450px;
+  }
+}

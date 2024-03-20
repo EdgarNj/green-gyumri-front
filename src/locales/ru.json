@@ -32,7 +32,11 @@
   "CVV": "CVV",
   "Cardholder Name": "Имя владельца карты",
   "Email": "Электронная почта",
+  "Confirm and Pay": "Подтвердить и оплатить",
+  "E-mail": "Эл-почта",
 
-  "Page not found": "Страница не найдена"
 
+  "Page not found": "Страница не найдена",
+  
+  "Must visit places in Gyumri": "Места, которые необходимо посетить в Гюмри"
 }

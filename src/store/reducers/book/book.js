@@ -4,7 +4,7 @@ import {
     getReservedDaysData,
     setBookDay,
     setCurrency, setFormErrorText,
-    setPercent,
+    setPercent, setReservationData,
     setVisitorsCount
 } from "../../actions/book/book";
 
@@ -25,6 +25,12 @@ const initialState = {
         cvv: "",
         cardNumber: "",
         expiryDate: ""
+    },
+    bookInfo: {
+        cardNumber: "",
+        cardholderName: "",
+        email: "",
+        tokenId: null
     }
 
 }
@@ -75,6 +81,10 @@ const reducer = createReducer(initialState, (builder) => {
             } else if (code === "incorrect_number") {
                 state.formError.cardNumber = "Invalid card number"
             }
+        })
+        .addCase(setReservationData, (state, action) => {
+            const {bookInfo} = action.payload;
+            state.bookInfo = bookInfo;
         })
 
 

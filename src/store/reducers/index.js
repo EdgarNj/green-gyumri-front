@@ -10,6 +10,7 @@ import celebrate from "./home/celebrate"
 import news from "./home/news"
 import lastBlock from "./home/lastBlock"
 import book from "./book/book"
+import places from "./places/places"
 
 import foods from "./foods/foods";
 import compositions from "./foods/compositions";
@@ -30,7 +31,8 @@ const reducers = {
     compositions,
     lastBlock,
     book,
-    notFound
+    notFound,
+    places
 }
 
 export default reducers

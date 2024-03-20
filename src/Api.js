@@ -51,9 +51,18 @@ class Api {
         return api.get(`prices`)
     }
 
-    static createReservation(values) {
+    static createPayment(values) {
         console.log(values)
         return api.post(`book/process-payment`, values, {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        })
+    }
+
+    static checkReservation(id) {
+
+        return api.put(`book/update`, {id}, {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             }
@@ -85,6 +94,10 @@ class Api {
     // FOODS
     static getFoodsData(page) {
         return api.get('/foods', {params: {limit: 20, page}});
+    }
+
+    static getPlacesData(page) {
+        return api.get('/places', {params: {limit: 12, page}});
     }
 
     static getCompositionsData(foodId) {

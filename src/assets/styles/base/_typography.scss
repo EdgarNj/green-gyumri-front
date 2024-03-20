@@ -1,6 +1,7 @@
 h1{
-  font-family: Script MT Bold,sans-serif;
-  font-weight: 700;
+  font-family: var(--home-main-title-font);
+  font-style:var(--home-main-title-style) ;
+  font-weight: var(--home-main-title-weight);
   font-size: 65px;
   line-height: 74px;
   letter-spacing: 2px;

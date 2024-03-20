@@ -12,9 +12,9 @@ function PayWith() {
                 <p>{t("Pay with")}</p>
             </div>
             <div className="icons__box">
-                <img src={visa} alt="Visa"/>
-                <img src={master} alt="Master"/>
-                <img src={arca} alt="Arca"/>
+                <img title="Visa" src={visa} alt="Visa"/>
+                <img title="Master" src={master} alt="Master"/>
+                <img title="Arca" src={arca} alt="Arca"/>
             </div>
         </div>
     );
