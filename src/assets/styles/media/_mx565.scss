@@ -36,10 +36,11 @@
     }
 
     .slider-container .slider-frame .slide {
-      transform: scale(0.8);
+      transform: scale(0.9);
 
       .recipeBtn {
         transform: none;
+        padding: 7px 25px
       }
 
       &.slide-current {

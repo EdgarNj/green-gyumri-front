@@ -16,12 +16,16 @@ import {useMediaQuery} from "usehooks-ts";
 function Foods() {
     const minWidth1401 = useMediaQuery('(min-width: 1401px)');
     const maxWidth1400 = useMediaQuery('(max-width: 1400px)');
+    const maxWidth767 = useMediaQuery('(max-width: 767px)');
     const maxWidth565 = useMediaQuery('(max-width: 565px)');
+
     const dispatch = useDispatch();
     const {t} = useTranslation();
+
     const {foods, totalPages} = useSelector(state => state.foods);
     const {compositions} = useSelector(state => state.compositions);
     const visitorsNumber = useSelector(state => state.book.visitorsCount)
+
     const [title, setTitle] = useState('');
     const [slideIndex, setSlideIndex] = useState(1);
     const [value, setValue] = useState(0);
@@ -36,8 +40,8 @@ function Foods() {
             setSlideIndex(endIndex);
             setShow(false);
         },
-        cellSpacing: 20,
         slidesToShow: slidesToShow,
+        cellSpacing: 15,
         defaultControlsConfig: {
             pagingDotsStyle: {display: 'none'},
             prevButtonClassName: "prev",
@@ -70,11 +74,15 @@ function Foods() {
 
     useEffect(() => {
         if (maxWidth1400) {
-            setSlidesToShow(1.7);
+            setSlidesToShow(1.9);
         }
 
         if (minWidth1401) {
             setSlidesToShow(2.7);
+        }
+
+        if (maxWidth767) {
+            setSlidesToShow(1.4);
         }
 
         if (maxWidth565) {
