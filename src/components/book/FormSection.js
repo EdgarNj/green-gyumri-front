@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useState} from 'react';
 import PriceForm from "./PriceForm";
 import CardForm from "./CardForm";
 import PayWith from "./PayWith";
@@ -7,14 +7,26 @@ import {useDispatch, useSelector} from "react-redux";
 import {setFormErrorText, setReservationData} from "../../store/actions/book/book";
 import {useNavigate} from "react-router-dom";
 
-const stripe = new Stripe('pk_test_51OeP0WLiImV3YhpMVHvkVmFuSuDh6TgCXy94nso9I0cDgmMWxzEX4MgW1DCHbDPjFTU2o98woVdKizlvNvH8cy5b00NBrf1gwa');
+const stripe = new Stripe('pk_test_51OeZe7GYKkovkPnaIYrvEwM8uXXVlsyDwpTk7ePURp2mLzAqvf4duCfFU8Zx0HW1M6zM6gGSD1EHyYqn9FL4r3UW00mNogjGou');
 
 function FormSection() {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const {visitorsCount, percent, currency, bookDate} = useSelector(state => state.book)
+    const [isValidDate, setValidData] = useState(true)
+    const [isValidVisitors, setValidVisitors] = useState(true)
     const handleSubmit = useCallback(async (values) => {
         try {
+            setValidData(true)
+            setValidVisitors(true)
+
+            if (!bookDate || !visitorsCount) {
+                setValidData(bookDate)
+                setValidVisitors(!!visitorsCount)
+                return
+            }
+
+
             let {cardNumber, cvv, expiration, cardholderName, email} = values;
             const number = cardNumber.replaceAll(" ", "");
             const exp_month = expiration.split("/")[0];
@@ -51,7 +63,7 @@ function FormSection() {
 
     return (
         <div className="forms__container">
-            <PriceForm/>
+            <PriceForm isValid={{isValidDate, isValidVisitors}}/>
             <PayWith/>
             <CardForm onSubmit={handleSubmit}/>
         </div>

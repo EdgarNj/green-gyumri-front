@@ -38,11 +38,11 @@ function BookConfirm() {
             date: bookDate
         }))
         if (payload.status === "ok") {
-            alert("exav")
-        } else {
-           alert("chexav")
-        }
+            navigate("/book/success", {state: {status: "success"}})
 
+        } else {
+            navigate("/book/declined", {state: {status: "declined"}})
+        }
 
 
     }, [cardNumber, cardholderName, email, percent, currency, visitorsCount, bookDate, tokenId]);

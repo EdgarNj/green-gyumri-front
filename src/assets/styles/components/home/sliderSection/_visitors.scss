@@ -15,6 +15,10 @@
   box-shadow: 0 24px 30px 0 var(--home-slider-booking-select-boxShdow);
   z-index: 100;
 
+  &.error {
+    border: 1px solid #fd6e6e;
+  }
+
   &-enter,
   &-enter-active {
     //transition: all 0.4s;

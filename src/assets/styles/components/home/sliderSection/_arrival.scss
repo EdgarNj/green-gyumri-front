@@ -10,6 +10,10 @@
   overflow: hidden;
   position: relative;
 
+  &.error {
+    border: 1px solid #fd6e6e;
+  }
+
   .line {
     width: 100%;
     height: 1px;

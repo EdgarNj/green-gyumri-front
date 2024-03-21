@@ -1,10 +1,17 @@
 import {createReducer} from "@reduxjs/toolkit";
-import {getPlacesDataRequest} from "../../actions/places/places";
+import {getPlacesDataRequest, getSinglePlaceDataRequest} from "../../actions/places/places";
 
 const initialState = {
     places: [],
     totalPages: 0,
-    page: 0
+    page: 0,
+    singlePlace: {
+        image: {},
+        title: "",
+        description: "",
+        lat: "",
+        lng: ""
+    }
 }
 
 const reducer = createReducer(initialState, (builder) => {
@@ -14,6 +21,19 @@ const reducer = createReducer(initialState, (builder) => {
             state.places = places;
             state.totalPages = totalPages;
             state.page = page;
+        })
+        .addCase(getSinglePlaceDataRequest.pending, (state) => {
+            state.singlePlace = {
+                image: {},
+                title: "",
+                description: "",
+                lat: "",
+                lng: ""
+            }
+        })
+        .addCase(getSinglePlaceDataRequest.fulfilled, (state, action) => {
+            const {place} = action.payload
+            state.singlePlace = place
         })
 })
 

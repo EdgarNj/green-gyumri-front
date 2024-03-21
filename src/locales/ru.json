@@ -6,21 +6,14 @@
   "Gyumri": "Гюмри",
   "Arrival": "Прибытие",
   "Number of visitors": "Количество посетителей",
-
-
   "About us": "О нас",
-
   "We provide:": "Мы обеспечиваем",
-
-
   "Join us to celebrate": "Присоединяйтесь к нам, чтобы отпраздновать",
   "Our news": "Наши новости",
-
   "Booking": "Бронирование",
   "Full Payment": "Полная оплата",
-  "Partial payment" :"Частичная оплата",
-  "Pay with" :"Оплатить с помощью",
-
+  "Partial payment": "Частичная оплата",
+  "Pay with": "Оплатить с помощью",
   "Invalid card number": "Неверный номер карты",
   "Required": "Необходимый",
   "Invalid email address": "Неверный адрес электронной почты",
@@ -34,9 +27,8 @@
   "Email": "Электронная почта",
   "Confirm and Pay": "Подтвердить и оплатить",
   "E-mail": "Эл-почта",
-
-
   "Page not found": "Страница не найдена",
-  
-  "Must visit places in Gyumri": "Места, которые необходимо посетить в Гюмри"
+  "Must visit places in Gyumri": "Места, которые необходимо посетить в Гюмри",
+  "Your book is confirmed!": "Ваша бронирование подтверждена!",
+  "Payment for book unsuccessful.": "Оплата за бронирование не прошла."
 }

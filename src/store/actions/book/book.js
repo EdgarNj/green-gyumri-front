@@ -4,7 +4,7 @@ import Api from "../../../Api";
 import {loadStripe} from '@stripe/stripe-js';
 
 
-const stripePromise = loadStripe('pk_test_51OeP0WLiImV3YhpMVHvkVmFuSuDh6TgCXy94nso9I0cDgmMWxzEX4MgW1DCHbDPjFTU2o98woVdKizlvNvH8cy5b00NBrf1gwa');
+const stripePromise = loadStripe('pk_test_51OeZe7GYKkovkPnaIYrvEwM8uXXVlsyDwpTk7ePURp2mLzAqvf4duCfFU8Zx0HW1M6zM6gGSD1EHyYqn9FL4r3UW00mNogjGou');
 const newStripe = await stripePromise;
 export const getReservedDaysData = createAsyncThunk("book/get-reserved-days", async () => {
     try {

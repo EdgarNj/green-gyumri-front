@@ -20,7 +20,6 @@
   "Invalid CVV": "Invalid CVV",
   "Invalid expiration date (MM/YY)": "Invalid expiration date",
   "Pay now": "Pay now",
-
   "Card Number": "Card Number",
   "Expiration (MM/YY):": "Expiration (MM/YY):",
   "CVV": "CVV",
@@ -28,10 +27,9 @@
   "Email": "Email",
   "E-mail": "E-mail",
   "Confirm and Pay": "Confirm and Pay",
-
   "Page not found": "Page not found",
+  "Must visit places in Gyumri": "Must visit places in Gyumri",
 
-
-  "Must visit places in Gyumri": "Must visit places in Gyumri"
-
+  "Your book is confirmed!": "Your book is confirmed!",
+  "Payment for book unsuccessful": " Payment for book unsuccessful!"
 }

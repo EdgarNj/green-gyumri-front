@@ -4,9 +4,11 @@ import Visitors from "../home/sliderSection/Visitors";
 import PreviewPrice from "./PreviewPrice";
 import PartialBox from "./PartialBox";
 import {useSelector} from "react-redux";
+import PropTypes from "prop-types";
 
 
-function PriceForm() {
+function PriceForm(props) {
+    const {isValid: {isValidDate, isValidVisitors}} = props
     // eslint-disable-next-line no-unused-vars
     const visitorsCount = useSelector(state => state.book.visitorsCount)
     const [fullPrice, setFullPrice] = useState({usd: 0, rub: 0, amd: 0})
@@ -17,12 +19,10 @@ function PriceForm() {
         if (visitorsCount >= minPeople) {
             const addVisitorsPrice = visitorsCount - minPeople;
 
-            // Calculate prices for all currencies
             const usd = minPrice.usd + (addVisitorsPrice * guestPrice.usd);
             const amd = minPrice.amd + (addVisitorsPrice * guestPrice.amd);
             const rub = minPrice.rub + (addVisitorsPrice * guestPrice.rub);
 
-            // Update the state with new prices
             setFullPrice({usd, amd, rub});
         } else {
             const usd = minPrice.usd;
@@ -32,16 +32,15 @@ function PriceForm() {
         }
     }, [visitorsCount, guestPrice, minPrice, minPeople]);
 
-
     return (
         <div className="price__form_box">
             <div className="write__info_box">
                 <div className="arrival__visitors__box">
                     <div className="arrival__book_select">
-                        <Arrival/>
+                        <Arrival isValid={isValidDate}/>
                     </div>
                     <div className="visitors__book_select">
-                        <Visitors/>
+                        <Visitors isValid={isValidVisitors}/>
                     </div>
                 </div>
                 <div className="previous__price">
@@ -59,3 +58,11 @@ function PriceForm() {
 }
 
 export default PriceForm;
+
+
+PriceForm.propTypes = {
+    isValid: PropTypes.shape({
+        isValidDate: PropTypes.bool.isRequired,
+        isValidVisitors: PropTypes.bool.isRequired
+    }).isRequired
+};

@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import BookConfirm from "./pages/book/BookConfirm";
 import Places from "./pages/places/Places";
 import SinglePlace from "./pages/places/SinglePlace";
+import BookStatus from "./pages/book/BookStatus";
 
 function App() {
     return (
@@ -17,6 +18,10 @@ function App() {
                 <Route element={<Home/>} path="/"/>
                 <Route element={<Booking/>} path="/book"/>
                 <Route element={<BookConfirm/>} path="/book/confirm"/>
+
+                <Route element={<BookStatus/>} path="/book/success"/>
+                <Route element={<BookStatus/>} path="/book/declined"/>
+
                 <Route element={<Services/>} path="/services"/>
                 <Route element={<Workers/>} path="/services/workers/:id"/>
                 <Route element={<Foods/>} path="/foods"/>

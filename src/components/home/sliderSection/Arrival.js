@@ -8,8 +8,10 @@ import moment from "moment";
 import {useTranslation} from "react-i18next";
 import {useDispatch, useSelector} from "react-redux";
 import {setBookDay} from "../../../store/actions/book/book";
+import PropTypes from "prop-types";
 
-function Arrival() {
+function Arrival(props) {
+    const {isValid} = props
     const openRef = useRef(null);
     const bookData = useSelector(state => state.book.bookDate)
     const [open, setOpen] = useState(false);
@@ -27,7 +29,7 @@ function Arrival() {
 
     return (
 
-        <div ref={openRef} className="arrival__container">
+        <div ref={openRef} className={`arrival__container ${isValid ? "" : "error"}`}>
             <OutsideClickHandler onOutsideClick={handleOutsideClick}>
                 <div className="closed__bar">
                     <div className="closed__bar_name">
@@ -52,3 +54,10 @@ function Arrival() {
 }
 
 export default Arrival;
+
+Arrival.propTypes = {
+    isValid: PropTypes.bool
+}
+Arrival.defaultProps = {
+    isValid: true
+}

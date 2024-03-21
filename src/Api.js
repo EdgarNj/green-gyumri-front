@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const api = axios.create({
-    baseURL: "http://192.168.10.146:4000",
+    baseURL: "http://192.168.100.11:4000",
     // baseURL: "http://localhost:4000",
 })
 
@@ -98,6 +98,10 @@ class Api {
 
     static getPlacesData(page) {
         return api.get('/places', {params: {limit: 12, page}});
+    }
+
+    static getSinglePlaceData(id) {
+        return api.get(`/places/${id}`);
     }
 
     static getCompositionsData(foodId) {

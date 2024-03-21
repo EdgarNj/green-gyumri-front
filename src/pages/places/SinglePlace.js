@@ -1,28 +1,32 @@
-import React, {useState} from 'react';
+import React, {useEffect} from 'react';
 import Wrapper from "../../components/Wrapper";
 import {Link, useParams} from "react-router-dom";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {useTranslation} from "react-i18next";
 import {ReactComponent as Chevron} from "../../assets/icons/homeSlider/chevronLeft.svg";
+import {getSinglePlaceDataRequest} from "../../store/actions/places/places";
 
 function SinglePlace() {
     const {id} = useParams()
+    const dispatch = useDispatch()
     const {t} = useTranslation()
-    const places = useSelector(state => state.places.places)
+    const placeData = useSelector(state => state.places.singlePlace)
 
-    const [placeData] = useState(places.find((data) => data.id === +id))
-    console.log(placeData)
+    useEffect(() => {
+        dispatch(getSinglePlaceDataRequest({id}))
+    }, [id]);
+
 
     return (
         <Wrapper>
             <section className="single__place_box">
                 <div className="container">
-
+                    <Link to="/places" className="go__back_link">
+                        <Chevron/>
+                    </Link>
                     <div className="title__box">
                         <h1>{t("Must visit places in Gyumri")}</h1>
-                        <Link to="/places" className="go__back_link">
-                            <Chevron/>
-                        </Link>
+
                     </div>
                     <div className="info__box">
                         <figure className="img__box">
@@ -34,10 +38,10 @@ function SinglePlace() {
                                 <p>{placeData.description}</p>
                             </div>
                             <div className="map__box">
-                                <iframe
+                                {placeData.lat ? <iframe
                                     className="map"
                                     src={`https://maps.google.com/maps?q=${placeData.lat},${placeData.lng}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
-                                />
+                                /> : null}
                             </div>
                         </article>
                     </div>

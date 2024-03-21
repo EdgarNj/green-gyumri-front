@@ -6,8 +6,11 @@ import OutsideClickHandler from "react-outside-click-handler";
 import {useTranslation} from "react-i18next";
 import {useDispatch, useSelector} from "react-redux";
 import {setVisitorsCount} from "../../../store/actions/book/book";
+import PropTypes from "prop-types";
 
-function Visitors() {
+
+function Visitors(props) {
+    const {isValid} = props
     const dispatch = useDispatch()
     const visitorsCount = useSelector(state => state.book.visitorsCount)
 
@@ -36,7 +39,7 @@ function Visitors() {
 
     return (
 
-        <div ref={barRef} className={`visitors__container`}>
+        <div ref={barRef} className={`visitors__container ${isValid ? "" : "error"}`}>
             <OutsideClickHandler onOutsideClick={handleOutsideClick}>
                 <div className="banner__container">
                     <div className="title__part">
@@ -80,3 +83,11 @@ function Visitors() {
 }
 
 export default Visitors;
+
+
+Visitors.propTypes = {
+    isValid: PropTypes.bool
+}
+Visitors.defaultProps = {
+    isValid: true
+}
