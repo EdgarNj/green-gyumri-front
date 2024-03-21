@@ -14,11 +14,11 @@ function FoodCard(props) {
             />
             <div className='btnBlock'>
                 <button
-                    className={`recipeBtn  ${slideIndex === i && show ? null : 'active'}`}
+                    className={`recipeBtn  ${slideIndex === i && show ? '' : 'active'}`}
                     onClick={() => slideIndex === i ? change(false) : null}>Recipe
                 </button>
                 <button
-                    className={`recipeBtn ${slideIndex === i && show ? 'active' : null}`}
+                    className={`recipeBtn ${slideIndex === i && show ? 'active' : ''}`}
                     onClick={() => slideIndex === i ? change(true) : null}>Calculator
                 </button>
             </div>

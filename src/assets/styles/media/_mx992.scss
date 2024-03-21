@@ -7,6 +7,7 @@
 
   .serviceMain {
     margin-top: 70px;
+    min-height: 400px;
 
     .slide {
       display: flex;
@@ -30,6 +31,24 @@
 
   .foodContent {
     margin: 30px 0 0;
+    min-height: 300px;
+
+    .slider-container {
+
+      .slide {
+
+        .recipeBtn {
+          transform: scale(0.9);
+        }
+
+        &.slide-current {
+
+          .recipeBtn {
+            transform: scale(1);
+          }
+        }
+      }
+    }
 
     .foodCard {
       height: 280px;
