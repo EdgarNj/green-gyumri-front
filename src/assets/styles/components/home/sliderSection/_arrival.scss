@@ -145,7 +145,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--home-slider-booking-select-closed-bg);
-
+  cursor: pointer;
   padding: 0 10px;
 }
 
@@ -172,6 +172,7 @@
   justify-content: center;
   align-items: center;
   transition: all 0.4s;
+
 
   svg {
     width: 12px;

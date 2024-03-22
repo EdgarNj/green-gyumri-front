@@ -41,16 +41,16 @@ function Visitors(props) {
 
         <div ref={barRef} className={`visitors__container ${isValid ? "" : "error"}`}>
             <OutsideClickHandler onOutsideClick={handleOutsideClick}>
-                <div className="banner__container">
+                <div onClick={() => {
+                    handleOpen()
+                }} className="banner__container">
                     <div className="title__part">
                         <SliderIcon/>
                         <p>
                             {`${t("Number of visitors")} ${visitorsCount && !open ? visitorsCount : ""}`}
                         </p>
                     </div>
-                    <button onClick={() => {
-                        handleOpen()
-                    }} className="button">
+                    <button  className="button">
                         <OpenIcon/>
                     </button>
                 </div>

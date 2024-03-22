@@ -1,11 +1,7 @@
 import {createAction, createAsyncThunk} from "@reduxjs/toolkit";
 import Api from "../../../Api";
 
-import {loadStripe} from '@stripe/stripe-js';
 
-
-const stripePromise = loadStripe('pk_test_51OeZe7GYKkovkPnaIYrvEwM8uXXVlsyDwpTk7ePURp2mLzAqvf4duCfFU8Zx0HW1M6zM6gGSD1EHyYqn9FL4r3UW00mNogjGou');
-const newStripe = await stripePromise;
 export const getReservedDaysData = createAsyncThunk("book/get-reserved-days", async () => {
     try {
         const {data} = await Api.getReservedDaysData()
@@ -43,7 +39,7 @@ export const setFormErrorText = createAsyncThunk("book/set-form-error", (arg, th
 
 export const createPayment = createAsyncThunk("book/create-payment", async (arg, thunkAPI) => {
     try {
-        const {tokenId, guestNumber, percent, currency, fullName, email, date} = arg
+        const { tokenId, guestNumber, percent, currency, fullName, email, date } = arg
 
         const {
             data: {
@@ -65,47 +61,37 @@ export const createPayment = createAsyncThunk("book/create-payment", async (arg,
             date
         })
         if (status !== "succeeded") {
-            const data = await newStripe.confirmCardPayment(clientSecret, {
-                payment_method: paymentMethod
+            const { loadStripe } = await import('@stripe/stripe-js');
+            const stripePromise = loadStripe('pk_test_51OeZe7GYKkovkPnaIYrvEwM8uXXVlsyDwpTk7ePURp2mLzAqvf4duCfFU8Zx0HW1M6zM6gGSD1EHyYqn9FL4r3UW00mNogjGou');
+            const newStripe = await stripePromise;
+
+
+            const timeoutPromise = new Promise((resolve, reject) => {
+                setTimeout(async () => {
+                    reject(new Error({ status: "timeout" }));
+
+                }, 5000);
             });
 
-            await Api.checkReservation(id)
-            if (data.error) {
-                throw new Error({status: "error"})
+            const paymentPromise = newStripe.confirmCardPayment(clientSecret, {
+                payment_method: paymentMethod
+            });
+            const result = await Promise.race([paymentPromise, timeoutPromise]);
+
+            if (result instanceof Error) {
+                throw result; // Throw the timeout error
+            }
+
+            if (result.error) {
+                throw new Error({ status: "error" });
             } else {
-                return thunkAPI.fulfillWithValue({status: "ok"})
+                await Api.checkReservation(id);
+                return thunkAPI.fulfillWithValue({ status: "ok" });
             }
         }
-        return thunkAPI.fulfillWithValue({status: "ok"})
+        return thunkAPI.fulfillWithValue({ status: "ok" });
     } catch (e) {
-        return thunkAPI.rejectWithValue({status: "error"})
-
+        console.log(e);
+        return thunkAPI.rejectWithValue({ status: "error" });
     }
-})
-
-
-// (async () => {
-//                 console.log(id, "<_-----00-0-")
-//                 try {
-//
-//                     const {data} = await Api.createPayment({
-//                         tokenId: id,
-//                         guestNumber: visitorsCount,
-//                         percent: percent,
-//                         currency,
-//                         fullName: cardholderName,
-//                         email,
-//                         date: bookDate
-//                     })
-//                     console.log(data, "form")
-//
-//                     const result = await newStripe.confirmCardPayment(data.client_secret, {
-//                         payment_method: data.paymentMethodId
-//                     });
-//
-//
-//                     console.log(result, "<---- result")
-//                 } catch (e) {
-//                     console.log(e)
-//                 }
-//             })()
+});

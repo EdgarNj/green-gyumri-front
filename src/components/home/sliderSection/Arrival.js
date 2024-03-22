@@ -31,12 +31,12 @@ function Arrival(props) {
 
         <div ref={openRef} className={`arrival__container ${isValid ? "" : "error"}`}>
             <OutsideClickHandler onOutsideClick={handleOutsideClick}>
-                <div className="closed__bar">
-                    <div className="closed__bar_name">
+                <div onClick={() => setOpen(!open)} className="closed__bar">
+                    <div  className="closed__bar_name">
                         <CalendarIcon/>
                         <p>{` ${date && !open ? moment(date).format('DD-MM-YYYY') : `${t("Arrival")}`}`} </p>
                     </div>
-                    <button onClick={() => setOpen(!open)} className="closed__bar_btn">
+                    <button  className="closed__bar_btn">
                         <OpenIcon/>
                     </button>
                 </div>
