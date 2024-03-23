@@ -72,8 +72,8 @@ const reducer = createReducer(initialState, (builder) => {
             }
         })
         .addCase(setFormErrorText.fulfilled, (state, action) => {
-            const {code, message} = action.payload
-            console.log(code, message)
+            const {code} = action.payload
+
             if (code === "invalid_expiry_month" || code === "invalid_expiry_year") {
                 state.formError.expiryDate = "Invalid expiration date (MM/YY)"
             } else if (code === "invalid_cvc") {

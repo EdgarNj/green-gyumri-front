@@ -20,17 +20,16 @@ function NotFound() {
         <Wrapper>
             <div id='not_found'>
                 {
-                    !maxWidth992 && images.map(datum => (
-                        <img className='images' key={datum.id} src={datum.path} alt="img"/>
-                    ))
-                }
-                {
-                    maxWidth992 && (
-                        <>
-                            <img className='bg' src={images[0].path} alt="image"/>
-                            <div className='layer'></div>
-                        </>
-                    )
+                    maxWidth992 ? (
+                            <>
+                                <img className='bg' src={images[0].path} alt="image"/>
+                                <div className='layer'></div>
+                            </>
+                        )
+                        :
+                        images.map(datum => (
+                            <img className='images' key={datum.id} src={datum.path} alt="img"/>
+                        ))
                 }
                 <div className="text_block">
                     <h4 className='title'>404</h4>

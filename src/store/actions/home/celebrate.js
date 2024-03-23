@@ -7,7 +7,7 @@ export const getHomeCelebrateDataRequest = createAsyncThunk("home/get-home-celab
 
         const {page} = arg
         const {data} = await Api.getHomeCelebrateData(page)
-        console.log(data, "action")
+
         return data
     } catch (e) {
         console.log(e)

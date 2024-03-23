@@ -13,8 +13,6 @@ const reducer = createReducer(initialState, (builder) => {
         .addCase(getHomeNewsDataRequest.fulfilled, (state, action) => {
             const {news} = action.payload
             state.data = news
-            console.log(action.payload)
-            console.log(news,"Red")
         })
 
 })

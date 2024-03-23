@@ -21,7 +21,7 @@ function CelebrateSection() {
 
 
     const fetchMoreData = useCallback(() => {
-        console.log(totalPages,page)
+
         if (totalPages > page) {
             dispatch(getHomeCelebrateDataRequest({page: page + 1}));
         }

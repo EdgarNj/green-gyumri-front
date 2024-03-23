@@ -52,7 +52,6 @@ class Api {
     }
 
     static createPayment(values) {
-        console.log(values)
         return api.post(`book/process-payment`, values, {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'

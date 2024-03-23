@@ -27,6 +27,7 @@ function App() {
                 <Route element={<Foods/>} path="/foods"/>
                 <Route element={<Places/>} path="/places"/>
                 <Route element={<SinglePlace/>} path="/places/:id"/>
+
                 <Route path="*" element={<NotFound/>}/>
             </Routes>
         </BrowserRouter>

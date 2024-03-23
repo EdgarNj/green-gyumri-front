@@ -4,15 +4,12 @@ import {useDispatch, useSelector} from "react-redux";
 import {getPlacesDataRequest} from "../../store/actions/places/places";
 import PlacesCard from "../../components/places/PlacesCard";
 import {useTranslation} from "react-i18next";
-
-// eslint-disable-next-line no-unused-vars
 import _ from "lodash"
 import PaginationItem from "../../assets/styles/components/places/PaginationItem";
 
 
 function Places() {
-    const dispatch = useDispatch()
-    // eslint-disable-next-line no-unused-vars
+    const dispatch = useDispatch();
     const {places, totalPages, page} = useSelector(state => state.places)
     const {t} = useTranslation()
 
