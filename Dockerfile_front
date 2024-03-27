@@ -1,0 +1,17 @@
+FROM alpine:latest
+RUN apk add --no-cache nodejs npm
+RUN npm install -g yarn
+
+WORKDIR /app
+COPY .. .
+COPY ./package*.json .
+
+RUN yarn
+
+COPY .. .
+
+EXPOSE 3001
+CMD ["sh", "-c", "yarn && yarn start"]
+#CMD ["yarn" ,"start"]
+
+
