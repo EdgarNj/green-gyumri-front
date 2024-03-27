@@ -88,7 +88,7 @@ function Foods() {
         if (maxWidth565) {
             setSlidesToShow(1);
         }
-    }, [maxWidth1400, minWidth1401, maxWidth565]);
+    }, [maxWidth1400, minWidth1401,maxWidth767, maxWidth565]);
 
     return (
         <Wrapper>

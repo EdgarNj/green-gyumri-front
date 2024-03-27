@@ -16,6 +16,7 @@ const reducer = createReducer(initialState, (builder) => {
             state.totalPages = totalPages;
         })
         .addCase(clearWorkersData,(state) => {
+            console.log(state)
             if (state.workers.length){
                 state.workers = []
             }

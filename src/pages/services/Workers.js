@@ -1,8 +1,8 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import {useNavigate, useParams} from "react-router-dom";
+import {Link, useNavigate, useParams} from "react-router-dom";
 import Wrapper from "../../components/Wrapper";
 import {useDispatch, useSelector} from "react-redux";
-import {getWorkersDataRequest} from "../../store/actions/services/workers";
+import { getWorkersDataRequest} from "../../store/actions/services/workers";
 import WorkersCard from "../../components/services/WorkersCard";
 import Carousel from "nuka-carousel";
 import {useMediaQuery} from "usehooks-ts";
@@ -52,11 +52,7 @@ function Workers() {
         if (totalPages > page) {
             setPage(page + 1);
         }
-    }, [page, totalPages])
-
-    const handleGoBack = useCallback(() => {
-        navigate('/services');
-    }, []);
+    }, [page, totalPages]);
 
     const options = {
         speed: 200,
@@ -78,7 +74,7 @@ function Workers() {
             <div id='services'>
                 <div className='container'>
                     <div className='serviceBlock'>
-                        <span className='arrow' onClick={() => handleGoBack()}> &#8249; </span>
+                        <Link to='/services' className='arrow' > &#8249; </Link>
                         <h1>{title}</h1>
                         <section className='serviceMain'>
                             {

@@ -1,12 +1,19 @@
 // SERVICES
 #services {
 
+  h1{
+    font-size: 45px;
+  }
+
+  .serviceMain {
+    margin-top: 30px;
+  }
+
   .servicesCard {
     width: 100%;
   }
 
   .workersCard {
-    width: 85%;
 
     .titleBlock {
       p {
@@ -18,7 +25,9 @@
       .icon {
         margin-right: 20px !important;
       }
-
+.text{
+  font-size: 18px;
+}
     }
   }
 }
@@ -258,17 +267,6 @@ h1 {
       font-size: 45px;
     }
   }
-
-  .items__box {
-    .places__card {
-      width: calc(100%);
-      height: 500px;
-      margin-bottom: 40px;
-    }
-
-  }
-
-
 }
 
 
@@ -278,4 +276,11 @@ h1 {
       font-size: 40px;
     }
   }
+}
+
+
+// lastSection
+
+.last__section_figcaption .link{
+  padding: 10px 70px;
 }

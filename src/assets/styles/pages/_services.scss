@@ -7,10 +7,6 @@
     width: 100%;
     position: relative;
 
-    .serviceMain{
-      min-height: 300px;
-    }
-
     .arrow{
       position: absolute;
       left: 33px;
@@ -21,10 +17,11 @@
   }
 
   .serviceMain {
+    min-height: 300px;
     margin-top: 80px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 
     .slider-container{
       width: 100%;
